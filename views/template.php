@@ -1,7 +1,9 @@
 <?php
 header('Set-Cookie: same-site-cookie=foo; SameSite=Lax');
 header('Set-Cookie: _biz_uid=21f9648999fb4dfbb620e7fabb6a4aae; SameSite=None; Secure');
+include_once 'vars.php'
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
