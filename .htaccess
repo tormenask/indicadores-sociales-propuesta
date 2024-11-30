@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+#RewriteBase /sis 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^([a-zA-Z0-9-]*)$ index.php?action=$1
+RewriteRule ^([a-zA-Z0-9-]*)/$ index.php?action=$1
+RewriteRule ^buscar/(.*)$ index.php?action=buscar&param=$1
+RewriteRule ^buscar/(.*)/$ index.php?action=buscar&param=$1
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?action=$1/$2
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/$ index.php?action=$1/$2
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?action=$1/$2/$3
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/$ index.php?action=$1/$2/$3
+RewriteRule ^(.*)/dadii/(.*)/(.*)$ index.php?action=$1/dadii&idDim=$2&idTem=$3
+RewriteRule ^(.*)/dadii/(.*)/(.*)/$ index.php?action=$1/dadii&idDim=$2&idTem=$3
+
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?action=$1/$2/$3/$4
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/$ index.php?action=$1/$2/$3/$4
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-_\,\ ]*)/([a-zA-Z0-9-_\,\ ]*)/(.*)/(.*)/(.*)/(.*)/(.*)$ index.php?action=$1/$2&idDim=$3&idTem=$4&idInd=$5&fte=$6&desTem=$7&fchs=$8&desGeo=$9
+
+</IfModule>
