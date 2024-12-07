@@ -11,35 +11,25 @@
     </ul>
 </div>
 <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-12 col-lg-12"
+        style="display:flex; align-items:center; justify-content: center; margin-top:3rem;">
+        <article style="display: flex; justify-content:center; align-items:center;">
+            <a href="/consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF; display: flex; justify-content:center; align-items:center; flex-direction:column">
+                <img src="/views/resources/images/home/dimensiones_sis.png"
+                    alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social, por comunas"
+                    style=" border-radius: 150px; width: 50%; margin-top: -65px;" />
+                <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo
+                    Social</h6>
+            </a>
+        </article>
+
+    </div>
+</div>
+<div class="row">
 
     <div class="" id="wrapper">
-        
         <?php include 'views/modules/consulta-indicadores/dimensiones-sis/sobre-desarrollo-sis.php' ?>
         <?php include 'views/modules/consulta-indicadores/dimensiones-sis/sidebar-dimensiones-sis.php'; ?>
-        <div class="col-xs-12 col-sm-4 col-md-12 col-lg-12">
-            <li class="two_third">
-                <article><a href="/consulta-indicadores/dimensiones-sis-comunas"
-                        style="text-decoration-color: #FFFFFF;"><img
-                            src="/views/resources/images/home/indicadores_comunas.png"
-                            alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social, por comunas"
-                            style=" border-radius: 150px; width: 100%; margin-top: -65px;" />
-                        <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo
-                            Social,
-                            por comunas</h6>
-                    </a>
-                    <!-- <p>Consulta los indicadores.</p> -->
-                </article>
-            </li>
-        </div>
-        <div class="col-xs-12 col-sm-12">
-            <div id="page-content-wrapper">
-                <div id="text-index" hidden>
-                    <h1 class="mt-4">Consulta de indicadores para la medición del desarrollo social</h1>
-                    <p>Para comenzar, selecciona la dimensión, temática e indicador a consultar, en el panel lateral.
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -107,12 +97,6 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
             $("#containerIndicador-" + idIndicador).addClass("col-lg-12");
             $('#btn-' + idIndicador).attr('href', '/consulta-indicadores/dimensiones-sis')
             $('#btn-' + idIndicador).text('Ver menos')
-
-            $('.tituloIndicador').each((index, title) => {
-                if (title.innerHTML.length > 30) {
-                    title.innerHTML = title.innerHTML.substring(0, 30) + '...';
-                }
-            })
         })
 
         data.append('tipoConsulta', tipoConsulta);
@@ -145,9 +129,9 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 <?php } else { ?>
     <script>
         var resp = "<div class='alert alert-danger alert-dismissable'>\n\
-                                                Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
-                                                Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
-                                            </div>";
+                                                                                    Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
+                                                                                    Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
+                                                                                </div>";
         $("#tabIndicador-" + idIndicador).html(resp);
     </script>
     <?php

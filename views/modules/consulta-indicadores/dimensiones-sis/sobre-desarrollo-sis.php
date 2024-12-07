@@ -20,19 +20,24 @@ require_once 'models/consultas.php';
 $resp = new ConsultasController();
 ?>
 <div class="row">
-    <div class="col-xs-12 col-sm-4" id="wrapper">
-    </div>
+
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin: 5rem;">
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 2rem">
-                        Acerca de los indicadores
-                    </a>
+        <div class="panel panel-default" style="border-color:white; box-shadow: 0px 2px 6px 0px rgba(32,32,32,0.3);">
+            <div class="panel-heading" role="tab" id="headingOne"
+                style="background-color:white; display:flex; justify-content:space-between; align-items:center; margin: 5px;">
+                <h4 class="panel-title" style="font-size:20px;">
+                    Acerca de los indicadores
                 </h4>
+                <button
+                    style="padding:8px; background-color:#215a9a; border: 1px white solid; border-radius: 5px; hover:pointer; color:white">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="color:white;">
+                        Ver más
+                    </a>
+                </button>
+
             </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="padding:10px">
                 <div class="panel-body">
                     <div id="text-index">
                         <h1>Sobre el Desarrollo Social</h1>
@@ -338,16 +343,21 @@ $resp = new ConsultasController();
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Análisis descriptivo para los indicadores sociales
-                    </a>
+        <div class="panel panel-default" style="border-color:white; box-shadow: 0px 2px 6px 0px rgba(32,32,32,0.3); margin-top: 2rem;">
+            <div class="panel-heading" role="tab" id="headingTwo"
+                style="background-color:white; background-color:white; display:flex; justify-content:space-between; align-items:center; margin: 5px;">
+                <h4 class="panel-title" style="font-size:20px;">
+                    Análisis descriptivo para los indicadores sociales
                 </h4>
+                <button
+                    style="padding:8px; background-color:#215a9a; border: 1px white solid; border-radius: 5px; hover:pointer; color:white">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:white;">
+                        Ver más
+                    </a>
+                </button>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" style="padding:10px">
                 <div class="panel-body">
                     <div id="page-content-wrapper">
                         <div id="text-index">
@@ -397,7 +407,6 @@ $resp = new ConsultasController();
                             <hr>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -409,11 +418,4 @@ $resp = new ConsultasController();
     $("#consulta-indicadores").addClass("active");
     $("#consulta-sis").addClass("active");
     $("#sis-sobre-desarrollo").addClass("back-item-menu");
-
-    $('.tituloIndicador').each((index, title) => {
-        title.innerHTML.length > 30 ? title.textContent = title.innerHTML.substring(0, 30) + '...' : false
-        /* if (title.innerHTML.length > 30) {
-            title.innerHTML = title.innerHTML.substring(0, 30) + '...';
-        } */
-    })
 </script>

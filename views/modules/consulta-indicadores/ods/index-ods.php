@@ -8,18 +8,8 @@
     </ul>
 </div>
 <div class="row">
-    <div class="col-xs-12 col-sm-4" id="wrapper">
+    <div class="col-12" id="wrapper">
         <?php include './views/modules/consulta-indicadores/ods/sidebar-ods.php'; ?>
-    </div>
-    <div class="col-xs-12 col-sm-8">
-        <div id="page-content-wrapper">
-            <div id="text-index" hidden>
-                <h1>Objetivos de Desarrollo Sostenible para Santiago de Cali</h1>
-                <hr>
-                <p>Para comenzar, selecciona el objetivo, meta e indicador a consultar, en el panel lateral.</p>
-            </div>
-            <div id="tabsIndicador" style="min-height: 720px; margin-bottom: 15px;"></div>
-        </div>
     </div>
 </div>
 <?php include './views/modules/footer.php'; ?>

@@ -18,6 +18,7 @@ class ConsultasController
      */
     public function consultarListadoIndicadoresPorConjunto($idConjuntoIndicadores, $tipoConsulta)
     {
+        $colorSet = ["Sostenibilidad" => "#70A83B", "Entorno Económico y Buen Gobierno" => "#D24E60", "Paz y Seguridad ciudadana" => "#F4DA4F", "Salud" => "#F4DA4F", "Educación" => "#7B477D", "Cultura y Participación Política con equidad de género" => "#7B477D", "Vida digna con equidad social" => "#D07DA2", "Ciudad Digital" => "#528E81"];
         $dimension = new Dimensiones();
         $dimensiones = array();
         if ($idConjuntoIndicadores == 'SIS' && $tipoConsulta == "Comunas") {
@@ -34,16 +35,17 @@ class ConsultasController
                 $idDimension = $dim['idDimension'];
                 if ($idDimension !== 'ODS_14' && $idDimension !== 'ODS_15') {
                     $icono = $dim['icono'];
-                    $color = $dim['color'];
-                    echo 
-                    "<div class='panel panel-default' style='margin:5rem;''>
-                        <div class='panel-heading' style='font-size:2rem; background-color='{$color};'>{$nombreDimension}</div>
-                        <div class='panel-body'>
+                    $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
+                    echo
+                        "<div class='panel panel-default' style='margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
+                         <div class='panel-heading' style='margin:25px; border-color:white !important; font-size:2rem; background-color:white; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px'>{$nombreDimension}</div>
+                        <div class='panel-body' style=' border-radius:10px'>
                             <div class='row'>";
-                                // Llama a la función y concatena el resultado
-                                echo $this->consultarListadoIndicadoresActivosPorDimensionController($idDimension, $color, $tipoConsulta);
-                            // Cierra el panel
-                            echo "</div>
+
+                    // Llama a la función y concatena el resultado
+                    echo $this->consultarListadoIndicadoresActivosPorDimensionController($idDimension, $color, $tipoConsulta);
+                    // Cierra el panel
+                    echo "</div>
                         </div>
                     </div>";
                 }
@@ -51,13 +53,14 @@ class ConsultasController
         } else {
             foreach ($dimensiones as $dim) {
                 $nombreDimension = trim($dim['nombreDimension']);
+                //echo $nombreDimension;
                 $idDimension = $dim['idDimension'];
                 $icono = $dim['icono'];
-                $color = $dim['color'];
+                $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
                 // Inicia el panel
-                echo "<div class='panel panel-default' style='margin:5rem'>
-                    <div class='panel-heading' style='font-size:2rem;'>{$nombreDimension}</div>
-                    <div class='panel-body'>
+                echo "<div class='panel panel-default' style='margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
+                    <div class='panel-heading' style='margin:25px; border-color:white !important; font-size:2rem; background-color:white; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px'>{$nombreDimension}</div>
+                    <div class='panel-body' style=' border-radius:10px'>
                         <div class='row'>";
                 // Llama a la función y concatena el resultado
                 echo $this->consultarListadoIndicadoresActivosPorDimensionController($idDimension, $color, $tipoConsulta);
@@ -185,13 +188,13 @@ class ConsultasController
                             <div class='col-lg-4 col-md-6 col-sm-12 col-xs-12' id='containerIndicador-{$indicadores[$i][1]}' style='margin-bottom:1rem'>
                                 <div class='panel panel-default' id='{$indicadores[$i][1]}'>
                                     <div class='panel-body'>
-                                        <div class='row'>
-                                            <div class='col-xs-3'>
-                                                <img src='...' alt='Imagen de ejemplo' class='img-responsive'>
+                                        <div class='row' style=''>
+                                            <div class='col-md-3 hidden-sm hidden-xs'>
+                                                <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'></div>
                                             </div>
-                                            <div class='col-xs-9' >
+                                            <div class='col-md-9' style='display:flex; align-items:center; justify-content:space-between;' >
                                                 <h4 class='panel-title tituloIndicador' id='title-{$indicadores[$i][1]}' style='font-weight:bold'>{$indicadores[$i][2]}</h4>
-                                                <a href={$enlace} id='btn-{$indicadores[$i][1]}' class='btn btn-md' style='margin-top:2rem; background-color:{$color};'>Ver más</a>
+                                                <a href={$enlace} id='btn-{$indicadores[$i][1]}' class='btn btn-md' style='background-color:{$color}; color:white;'>Ver más</a>
                                             </div>
                                             <div class='col-12' id='tabIndicador-{$indicadores[$i][1]}' style='min-height: 120px; margin-bottom: 15px; margin-top:9rem; display:none;'></div>
                                         </div>
@@ -7208,7 +7211,6 @@ $(document).ready(function() {
                 $icono = "3";
             } else if ($tipoConsulta == 'PIIA') {
                 $icono = "5";
-
             }
 
             if ($tipoConsulta == 'EXP') {
