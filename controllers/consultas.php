@@ -190,7 +190,7 @@ class ConsultasController
                                     <div class='panel-body'>
                                         <div class='row'>
                                             <div class='col-md-3 hidden-sm hidden-xs'>
-                                                <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'></div>
+                                                <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'><img src='/views/resources/images/dimensiones/N.png' style='width:100%; height:100%;'/></div>
                                             </div>
                                             <div class='col-md-9' style='display:flex; align-items:center; justify-content:space-between;' >
                                                 <h4 class='panel-title tituloIndicador' id='title-{$indicadores[$i][1]}' style='font-weight:bold'>{$indicadores[$i][2]}</h4>
