@@ -7,18 +7,7 @@
     </ul>
 </div>
 <div class="row">
-    <div class="col-xs-12 col-sm-4" id="wrapper">
-        <?php include './views/modules/consulta-indicadores/igc/sidebar-igc.php'; ?>
-    </div>
-    <div class="col-xs-12 col-sm-8">
-        <div id="page-content-wrapper">
-            <div id="text-index" hidden>
-                <h1>Consulta de Indicadores Globales de Ciudad</h1>
-                <p>Para comenzar, selecciona la dimensión, temática e indicador a consultar, en el panel lateral.</p>
-            </div>
-            <div id="tabsIndicador" style="min-height: 720px; margin-bottom: 15px;"></div>
-        </div>
-    </div>
+    <?php include './views/modules/consulta-indicadores/igc/sidebar-igc.php'; ?>
 </div>
 <?php include './views/modules/footer.php'; ?>
 <script>
@@ -35,32 +24,41 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && isset($_GET['idInd']) && i
     $fechas = $_GET['fchs'];
     $desagregacionesGeograficas = $_GET['desGeo'];
 } else {
-    echo '<script> $("#text-index").show(); $("#tabsIndicador").hide(); </script>';
+    //echo '<script> $("#text-index").show(); $("#tabsIndicador").hide(); </script>';
 }
 if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empty($fuente) && !empty($desagregacionesTematicas) && !empty($fechas) && !empty($desagregacionesGeograficas)) {
     $indc = new IndicadoresController();
-    $indc->contadorConsultasIndicadores($idIndicador);  
+    $indc->contadorConsultasIndicadores($idIndicador);
     ?>
     <script>
         //Para overlay
         $.LoadingOverlaySetup({
-        background: "rgba(255, 255, 255, 0.5)",
-        image           : "/views/resources/images/cube_load.gif",
-        imageAnimation  : "3.5s fadein",
-        imageColor      : "#ffcc00"
-    });
+            background: "rgba(255, 255, 255, 0.5)",
+            image: "/views/resources/images/cube_load.gif",
+            imageAnimation: "3.5s fadein",
+            imageColor: "#ffcc00"
+        });
 
-    $("#tabsIndicador").LoadingOverlay("show");
+        $("#tabIndicador-"+idIndicador).LoadingOverlay("show");
         setTimeout(function () {
-            $("#tabsIndicador").LoadingOverlay("hide");
+            $("#tabIndicador-"+idIndicador).LoadingOverlay("hide");
         }, 7000);
 
-        // $("#tabsIndicador").LoadingOverlay("show", {
+        $(document).ready(function () {
+            $("#tabIndicador-" + idIndicador).css("display", "block");
+            $("#containerIndicador-" + idIndicador).removeClass("col-md-6");
+            $("#containerIndicador-" + idIndicador).removeClass("col-lg-4");
+            $("#containerIndicador-" + idIndicador).addClass("col-md-12");
+            $("#containerIndicador-" + idIndicador).addClass("col-lg-12");
+            $('#btn-' + idIndicador).attr('href', '/consulta-indicadores/igc')
+            $('#btn-' + idIndicador).text('Ver menos')
+        })
+        // $("#tabIndicador-"+idIndicador).LoadingOverlay("show", {
         //     background: "rgba(255, 255, 255, 0.5)",
         //     image: "/views/resources/images/cube_load.gif"
         // });
         // setTimeout(function () {
-        //     $("#tabsIndicador").LoadingOverlay("hide");
+        //     $("#tabIndicador-"+idIndicador).LoadingOverlay("hide");
         // }, 3000);
 
         //Para consulta
@@ -96,17 +94,17 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
             processData: false,
             success: function (resp) {
                 consultarDesagregacionesGeograficas(idIndicador);
-                $("#tabsIndicador").html(resp);
+                $("#tabIndicador-"+idIndicador).html(resp);
             }
         });
     </script>
 <?php } else { ?>
     <script>
         var resp = "<div class='alert alert-danger alert-dismissable'>\n\
-                        Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
-                        Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
-                    </div>";
-        $('#tabsIndicador').html(resp);
+                            Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
+                            Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
+                        </div>";
+        $('#tabIndicador-'+idIndicador).html(resp);
     </script>
     <?php
 }

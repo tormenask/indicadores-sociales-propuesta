@@ -27,7 +27,7 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && isset($_GET['idInd']) && i
     $fechas = $_GET['fchs'];
     $desagregacionesGeograficas = $_GET['desGeo'];
 } else {
-    echo '<script> $("#text-index").show(); $("#tabsIndicador").hide(); </script>';
+    //echo '<script> $("#text-index").show(); $("#tabsIndicador").hide(); </script>';
 }
 if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empty($fuente) && !empty($desagregacionesTematicas) && !empty($fechas) && !empty($desagregacionesGeograficas)) {
     $indc = new IndicadoresController();
@@ -42,11 +42,20 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         imageColor      : "#ffcc00"
     });
 
-    $("#tabsIndicador").LoadingOverlay("show");
+    $("#tabIndicador-"+idIndicador).LoadingOverlay("show");
         setTimeout(function () {
-            $("#tabsIndicador").LoadingOverlay("hide");
+            $("#tabIndicador-"+idIndicador).LoadingOverlay("hide");
         }, 7000);
 
+        $(document).ready(function () {
+            $("#tabIndicador-" + idIndicador).css("display", "block");
+            $("#containerIndicador-" + idIndicador).removeClass("col-md-6");
+            $("#containerIndicador-" + idIndicador).removeClass("col-lg-4");
+            $("#containerIndicador-" + idIndicador).addClass("col-md-12");
+            $("#containerIndicador-" + idIndicador).addClass("col-lg-12");
+            $('#btn-' + idIndicador).attr('href', '/consulta-indicadores/ods')
+            $('#btn-' + idIndicador).text('Ver menos')
+        })
 
         //Para consulta
         var tipoConsulta = 'ODS';
@@ -80,7 +89,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
             contentType: false,
             processData: false,
             success: function (resp) {
-                $("#tabsIndicador").html(resp);
+                $("#tabIndicador-"+idIndicador).html(resp);
             }
         });
     </script>
@@ -90,7 +99,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
                         Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
                         Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
                     </div>";
-        $('#tabsIndicador').html(resp);
+        $('#tabIndicador-'+idIndicador).html(resp);
     </script>
     <?php
 }

@@ -1,17 +1,10 @@
-<?php include './views/modules/header.php'; ?>
-<div class="row">
-    <ul class="breadcrumb">
-        <li><a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
-        <li>Consulta de Indicadores</li>
-        <li><a href="/consulta-indicadores/igc">Indicadores Globales de Ciudad</a></li>
-        <li class="active"><a href="/consulta-indicadores/igc/estructura">Estructura</a></li>
-    </ul>
-</div>
+
+
 <div class="row">
     <div class="col-xs-12 col-sm-4" id="wrapper">
-        <?php include './views/modules/consulta-indicadores/igc/sidebar-igc.php'; ?>
+
     </div>
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12">
         <div id="page-content-wrapper">
             <div id="text-index">
                 <h1>Estructura de los Indicadores Globales de Ciudad</h1>
@@ -564,7 +557,6 @@
         </div>
     </div>
 </div>
-<?php include './views/modules/footer.php'; ?>
 <script>
     $("#consultaIndicadores").addClass("active");
     $("#consultaIGC").addClass("active");

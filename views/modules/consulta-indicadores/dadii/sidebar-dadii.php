@@ -26,7 +26,7 @@ $resp = new ConsultasController();
     </div>    
     <!--<div class="sidebar-nav">-->     
     <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
+        <div class="panel panel-default" >
             <div class="panel-heading" style="background-color: #2fb56a;">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#informacion-conjunto" 

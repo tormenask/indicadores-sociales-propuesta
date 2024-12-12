@@ -18,7 +18,7 @@ class ConsultasController
      */
     public function consultarListadoIndicadoresPorConjunto($idConjuntoIndicadores, $tipoConsulta)
     {
-        $colorSet = ["Sostenibilidad" => "#70A83B", "Entorno Económico y Buen Gobierno" => "#D24E60", "Paz y Seguridad ciudadana" => "#F4DA4F", "Salud" => "#F4DA4F", "Educación" => "#7B477D", "Cultura y Participación Política con equidad de género" => "#7B477D", "Vida digna con equidad social" => "#D07DA2", "Ciudad Digital" => "#528E81"];
+        $colorSet = ["Sostenibilidad" => "#70A83B", "Entorno Económico y Buen Gobierno" => "#D24E60", "Salud" => "#76AADB", "Paz y Seguridad ciudadana" => "#F4DA4F", "Salud" => "#F4DA4F", "Educación" => "#7B477D", "Cultura y Participación Política con equidad de género" => "#7B477D", "Vida digna con equidad social" => "#D07DA2", "Ciudad Digital" => "#528E81"];
         $dimension = new Dimensiones();
         $dimensiones = array();
         if ($idConjuntoIndicadores == 'SIS' && $tipoConsulta == "Comunas") {
@@ -37,8 +37,8 @@ class ConsultasController
                     $icono = $dim['icono'];
                     $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
                     echo
-                        "<div class='panel panel-default' style='margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
-                         <div class='panel-heading' style='margin:25px; border-color:white !important; font-size:2rem; background-color:white; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px'>{$nombreDimension}</div>
+                        "<div class='panel panel-default' style='border-radius: 8px 8px 0 0; margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
+                         <div class='panel-heading' style='border-color:white !important; font-size:2rem; background:{$color}; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px' style=''><h3 style='margin-left:20px; color:white; font-weight:semi-bold;'>{$nombreDimension}</h3></div>
                         <div class='panel-body' style=' border-radius:10px'>
                             <div class='row'>";
 
@@ -58,8 +58,8 @@ class ConsultasController
                 $icono = $dim['icono'];
                 $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
                 // Inicia el panel
-                echo "<div class='panel panel-default' style='margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
-                    <div class='panel-heading' style='margin:25px; border-color:white !important; font-size:2rem; background-color:white; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px'>{$nombreDimension}</div>
+                echo "<div class='panel panel-default' style='border-radius: 8px 8px 0 0; margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
+                    <div class='panel-heading' style='border-color:white !important; font-size:2rem; background:{$color}; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px' style='filter: brightness(100000%) hue-rotate(0deg) saturate(0%);'><h3 style='margin-left:20px; color:white; font-weight:semi-bold;'>{$nombreDimension}</h3></div>
                     <div class='panel-body' style=' border-radius:10px'>
                         <div class='row'>";
                 // Llama a la función y concatena el resultado
@@ -188,7 +188,7 @@ class ConsultasController
                             <div class='col-lg-4 col-md-6 col-sm-12 col-xs-12' id='containerIndicador-{$indicadores[$i][1]}' style='margin-bottom:1rem'>
                                 <div class='panel panel-default' id='{$indicadores[$i][1]}'>
                                     <div class='panel-body'>
-                                        <div class='row' style=''>
+                                        <div class='row'>
                                             <div class='col-md-3 hidden-sm hidden-xs'>
                                                 <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'></div>
                                             </div>
@@ -2054,11 +2054,7 @@ class ConsultasController
                     </p>
                 </div>
             </div>
-            <script>
-            	  $("#' . $idDimension . '").addClass("in");            
-            	  $("#' . $idTematica . '_cali").addClass("in");            
-            	  $("#' . $idIndicador . '").addClass("back-item-menu");            
-            </script>';
+';
             if ($tipoConsulta == "PIIA") {
                 include 'formConsultaPiia.php';
             } else {
@@ -2615,12 +2611,7 @@ class ConsultasController
                     ' . $nombreIndicador . '
                     </p>
                 </div>
-            </div>
-            <script>
-             $("#' . $idDimension . '").addClass("in");            
-             $("#' . $idTematica . '_cali").addClass("in");            
-             $("#' . $idIndicador . '").addClass("back-item-menu");            
-            </script>';
+            </div>';
             echo '
             <div class="row">
                 <div class="col-xs-12 col-sm-8" style="padding:10px;margin-left:-10px;">
@@ -3327,12 +3318,7 @@ class ConsultasController
                         Desagregaciones geográficas: ' . implode(' - ', $desagregacionesGeograficas2) . ' <br>
                     </p>
                 </div>
-            </div>
-            <script>
-            	  $("#' . $idDimension . '").addClass("in");            
-            	  $("#' . $idTematica . '_cali").addClass("in");            
-            	  $("#' . $idIndicador . '").addClass("back-item-menu");            
-            </script>';
+            </div>';
             include 'formConsultaIndicador.php';
             echo '
             <ul class = "nav nav-tabs">

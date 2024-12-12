@@ -23,6 +23,8 @@ $resp = new ConsultasController();
 
 <link href="/views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/views/resources/css/map.css" media="all">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="/views/resources/lib/jquery-number/jquery.number.min.js"></script>
@@ -44,6 +46,25 @@ $resp = new ConsultasController();
         </h6>
     </div>
     <div class="row" style="margin: 5rem;">
+        <div class="container col-12">
+            <h2 class="title">Mapa de Indicadores por Comuna</h2>
+            <div class="map-container">
+                <div id="map"></div>
+                <div id="info-panel" class="info-panel">
+                    <h3 class="info-title">Información Detallada</h3>
+                    <div id="info-content" class="info-content">
+                        <p class="placeholder">Haga clic en una comuna para ver su información detallada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="legend">
+                <div><span style="background-color: #006837;"></span>80-100%</div>
+                <div><span style="background-color: #31a354;"></span>60-80%</div>
+                <div><span style="background-color: #78c679;"></span>40-60%</div>
+                <div><span style="background-color: #c2e699;"></span>20-40%</div>
+                <div><span style="background-color: #ffffcc;"></span>0-20%</div>
+            </div>
+        </div>
         <div class="col-12">
             <div id="page-content-wrapper">
                 <div class="row">
@@ -214,3 +235,5 @@ $resp = new ConsultasController();
 <?php
 $resp->consultarListadoIndicadoresPorConjunto('SIS', 'Comunas');
 ?>
+<script src="/views/resources/js/scriptMapa.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

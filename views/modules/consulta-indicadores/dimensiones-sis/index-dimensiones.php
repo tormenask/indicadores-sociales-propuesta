@@ -26,7 +26,6 @@
     </div>
 </div>
 <div class="row">
-
     <div class="" id="wrapper">
         <?php include 'views/modules/consulta-indicadores/dimensiones-sis/sobre-desarrollo-sis.php' ?>
         <?php include 'views/modules/consulta-indicadores/dimensiones-sis/sidebar-dimensiones-sis.php'; ?>
@@ -34,10 +33,6 @@
 
 </div>
 <?php include 'views/modules/footer.php'; ?>
-<script>
-    $("#consulta-sis").addClass("active");
-    $("#consulta-indicadores").addClass("active");
-</script>
 <?php
 if (isset($_GET['idDim']) && isset($_GET['idTem']) && isset($_GET['idInd']) && isset($_GET['fte']) && isset($_GET['desTem']) && isset($_GET['fchs']) && isset($_GET['desGeo'])) {
     $idDimension = $_GET['idDim'];

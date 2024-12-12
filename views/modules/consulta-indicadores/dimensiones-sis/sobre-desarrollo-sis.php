@@ -414,8 +414,3 @@ $resp = new ConsultasController();
     <?php $resp->consultarListadoIndicadoresPorConjunto('SIS', ''); ?>
 
 </div>
-<script>
-    $("#consulta-indicadores").addClass("active");
-    $("#consulta-sis").addClass("active");
-    $("#sis-sobre-desarrollo").addClass("back-item-menu");
-</script>
