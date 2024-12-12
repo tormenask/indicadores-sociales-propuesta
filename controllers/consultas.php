@@ -3733,12 +3733,7 @@ class ConsultasController
                         Zona geográfica: ' . $zonaGeografica . ' <br>
                     </p>
                 </div>
-            </div>
-            <script>
-            	  $("#' . $idDimension . '").addClass("in");            
-            	  $("#' . $idTematica . '_cali").addClass("in");            
-            	  $("#' . $idIndicador . '").addClass("back-item-menu");            
-            </script>';
+            </div>';
             include 'formConsultaExpediente.php';
             echo '
                 

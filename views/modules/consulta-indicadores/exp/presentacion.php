@@ -1,17 +1,8 @@
-<?php include './views/modules/header.php'; ?>
+
+
 <div class="row">
-    <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
-        <li>Consulta de Indicadores</li>
-        <li><a href="/consulta-indicadores/exp">Indicadores del Expediente Municipal</a></li>
-        <li class="active"><a href="/consulta-indicadores/exp/presentacion">Presentación</a></li>
-    </ul>
-</div>
-<div class="row">
-    <div class="col-xs-12 col-sm-4" id="wrapper">
-        <?php include './views/modules/consulta-indicadores/exp/sidebar-exp.php'; ?>
-    </div>
-    <div class="col-xs-12 col-sm-8">
+
+    <div class="col-12">
         <div id="page-content-wrapper">
             <div id="text-index">
                 <h1>Presentación de los Indicadores del Expediente Municipal</h1>
@@ -158,7 +149,7 @@
         </div>
     </div>
 </div>
-<?php include './views/modules/footer.php'; ?>
+
 <script>
     $("#consultaIndicadores").addClass("active");
     $("#consultaEXP").addClass("active");

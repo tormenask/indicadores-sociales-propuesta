@@ -6,19 +6,8 @@
         <li class="active"><a href="/consulta-indicadores/exp">Indicadores del Expediente Municipal</a></li>
     </ul>
 </div>
-<div class="row">
-    <div class="col-xs-12 col-sm-4" id="wrapper">
-        <?php include './views/modules/consulta-indicadores/exp/sidebar-exp.php'; ?>
-    </div>
-    <div class="col-xs-12 col-sm-8">
-        <div id="page-content-wrapper">
-            <div id="text-index" hidden>
-                <h1>Consulta de Indicadores del Expediente Municipal</h1>
-                <p>Para comenzar, selecciona la dimensión, temática e indicador a consultar, en el panel lateral.</p>
-            </div>
-            <div id="tabsIndicador" style="min-height: 720px; margin-bottom: 15px;"></div>
-        </div>
-    </div>
+<div class="col-12" id="wrapper">
+    <?php include './views/modules/consulta-indicadores/exp/sidebar-exp.php'; ?>
 </div>
 <?php include './views/modules/footer.php'; ?>
 <script>
@@ -35,30 +24,44 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && $_GET['idInd'] && $_GET['d
     $fechas = $_GET['fchs'];
     $zonaGeografica = $_GET['desGeo'];
 } else {
-    echo '<script> $("#text-index").show(); $("#tabsIndicador").hide(); </script>';
+    echo '<script> $("#text-index").show(); $("#tabIndicador-).hide(); </script>';
 }
 if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empty($tipoZonaGeografica) && !empty($desagregacionesTematicas) && !empty($fechas) && !empty($zonaGeografica)) {
-    ?> 
+    ?>
     <script>
         //Para overlay
         $.LoadingOverlaySetup({
-        background: "rgba(255, 255, 255, 0.5)",
-        image           : "/views/resources/images/cube_load.gif",
-        imageAnimation  : "3.5s fadein",
-        imageColor      : "#ffcc00"
-    });
+            background: "rgba(255, 255, 255, 0.5)",
+            image: "/views/resources/images/cube_load.gif",
+            imageAnimation: "3.5s fadein",
+            imageColor: "#ffcc00"
+        });
 
-    $("#tabsIndicador").LoadingOverlay("show");
+        $("#tabIndicador-" + idIndicador).LoadingOverlay("show");
         setTimeout(function () {
-            $("#tabsIndicador").LoadingOverlay("hide");
+            $("#tabIndicador-" + idIndicador).LoadingOverlay("hide");
         }, 7000);
+        $(document).ready(function () {
+            $("#tabIndicador-" + idIndicador).css("display", "block");
+            $("#containerIndicador-" + idIndicador).removeClass("col-md-6");
+            $("#containerIndicador-" + idIndicador).removeClass("col-lg-4");
+            $("#containerIndicador-" + idIndicador).addClass("col-md-12");
+            $("#containerIndicador-" + idIndicador).addClass("col-lg-12");
+            $('#btn-' + idIndicador).attr('href', '/consulta-indicadores/dimensiones-sis-comunas')
+            $('#btn-' + idIndicador).text('Ver menos')
 
-        // $("#tabsIndicador").LoadingOverlay("show", {
+            $('.tituloIndicador').each((index, title) => {
+                if (title.innerHTML.length > 30) {
+                    title.innerHTML = title.innerHTML.substring(0, 30) + '...';
+                }
+            })
+        })
+        // $("#tabIndicador-).LoadingOverlay("show", {
         //     background: "rgba(255, 255, 255, 0.5)",
         //     image: "/views/resources/images/cube_load.gif"
         // });
         // setTimeout(function () {
-        //     $("#tabsIndicador").LoadingOverlay("hide");
+        //     $("#tabIndicador-).LoadingOverlay("hide");
         // }, 3000);
 
         //Para consulta
@@ -91,8 +94,8 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
             success: function (resp) {
                 consultarTiposZonasGeograficas(idIndicador);
                 console.log(resp);
-                $("#tabsIndicador").html(resp);
-                $("#tabsIndicador").show();
+                $("#tabIndicador-" + idIndicador).html(resp);
+                $("#tabIndicador-" + idIndicador).show();
             }
         });
     </script>
@@ -120,10 +123,10 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 <?php } else { ?>
     <script>
         var resp = "<div class='alert alert-danger alert-dismissable'>\n\
-                        Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
-                        Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
-                    </div>";
-        $('#tabsIndicador').html(resp);
+                            Error al realizar la consulta. Debe seleccionar todos los filtros.<br>\n\
+                            Para volver a la página anterior, haga clic <a href='javascript:history.back(-1);' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
+                        </div>";
+        $('#tabIndicador-' + idIndicador).html(resp);
     </script>
     <?php
 }
