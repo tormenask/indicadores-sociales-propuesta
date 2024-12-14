@@ -1,9 +1,9 @@
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li class="active"><a href="/consulta-indicadores/exp">Indicadores del Expediente Municipal</a></li>
+        <li class="active"><a href="consulta-indicadores/exp">Indicadores del Expediente Municipal</a></li>
     </ul>
 </div>
 <div class="col-12" id="wrapper">

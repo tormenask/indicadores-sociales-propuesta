@@ -1,14 +1,14 @@
-<link rel="stylesheet" type="text/css" href="/views/resources/opc/lib/css/keen-dashboards.css">
-<link rel="stylesheet" type="text/css" href="/views/resources/opc/lib/css/dc.min.css">
-<link rel="stylesheet" type="text/css" href="/views/resources/opc/lib/css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="views/resources/opc/lib/css/keen-dashboards.css">
+<link rel="stylesheet" type="text/css" href="views/resources/opc/lib/css/dc.min.css">
+<link rel="stylesheet" type="text/css" href="views/resources/opc/lib/css/leaflet.css">
 
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
         <li>Otros indicadores</li>
-        <li class="active"><a href="/consulta-indicadores/opc">Visualizador de datos del Observatorio de Paz y Convivencia</a></li>
+        <li class="active"><a href="consulta-indicadores/opc">Visualizador de datos del Observatorio de Paz y Convivencia</a></li>
     </ul>
 </div>
 <div id="wrapper" class="active row">

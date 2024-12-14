@@ -153,7 +153,7 @@ $resp = new ConsultasController();
                         </p>
                         <br>
                         <div style="text-align: center; justify-content:center; display:flex">
-                            <img src="/views/resources/images/sis/desarrollo_social.png" class="img-responsive"
+                            <img src="views/resources/images/sis/desarrollo_social.png" class="img-responsive"
                                 style="width: 50%;" alt="Desarrollo Social">
                             <h6>Fuente: Elaboración Equipo SIS</h6>
                         </div>
@@ -385,7 +385,7 @@ $resp = new ConsultasController();
                                             Santiago de Cali - 2022</td>
                                         <td style="text-align:center">2022</td>
                                         <td style="text-align:center">
-                                            <a href="/public/SIS/Analisis-descriptivo-indicadores-sociales-2022.pdf"
+                                            <a href="public/SIS/Analisis-descriptivo-indicadores-sociales-2022.pdf"
                                                 target="_blank">
                                                 <i class="fa fa-file-pdf-o" style="font-size:48px;color:red;  "></i>
                                             </a>
@@ -396,7 +396,7 @@ $resp = new ConsultasController();
                                             Santiago de Cali - 2019</td>
                                         <td style="text-align:center">2019</td>
                                         <td style="text-align:center">
-                                            <a href="/public/SIS/Analisis-descriptivo-indicadores-sociales-2019.pdf"
+                                            <a href="public/SIS/Analisis-descriptivo-indicadores-sociales-2019.pdf"
                                                 target="_blank">
                                                 <i class="fa fa-file-pdf-o" style="font-size:48px;color:red;  "></i>
                                             </a>

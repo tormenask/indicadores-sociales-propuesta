@@ -1,5 +1,5 @@
 <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-    <img src="/views/resources/images/home/indicadores_opc.png" alt="Imagen de presentación del Visualizador de datos del Observatorio de Paz y Convivencia" style="height: 65px;"/>
+    <img src="views/resources/images/home/indicadores_opc.png" alt="Imagen de presentación del Visualizador de datos del Observatorio de Paz y Convivencia" style="height: 65px;"/>
 </div>
 <div class="sidebar-nav">     
     <div class="panel-group" id="accordion">
@@ -14,7 +14,7 @@
             </div>
             <div id="informacion-conjunto" class="panel-collapse collapse in">
                 <ul class="list-group" style="font-size: 13px;">
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/opc/presentacion">Presentación</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/opc/presentacion">Presentación</a></li>
                 </ul>
             </div>
         </div>
@@ -26,7 +26,7 @@
             </div>
             <div id="indicadores-conjunto" class="panel-collapse collapse in">
                 <ul class="list-group" style="font-size: 13px;">
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/opc">Visualizador de datos</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/opc">Visualizador de datos</a></li>
                 </ul>
             </div>
         </div>

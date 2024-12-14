@@ -18,7 +18,7 @@
                         <td>Metodología para el seguimiento a indicadores de los Objetivos de Desarrollo Sostenible -
                             ODS para Santiago de Cali</td>
                         <td style="text-align:center">
-                            <a href="/public/ODS/Metodologia-seguimiento-ODS-Cali.pdf" target="_blank">
+                            <a href="public/ODS/Metodologia-seguimiento-ODS-Cali.pdf" target="_blank">
                                 <i class="fa fa-file-pdf-o" style="font-size:48px;color:red;  "></i>
                             </a>
                         </td>

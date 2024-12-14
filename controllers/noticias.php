@@ -35,13 +35,13 @@ class NoticiaController {
                 echo '
                 <div style="padding: 8px 8px;">
                     <div class="panel-title" style="display: inline-block; padding: 0 10px; border-radius: 4px; text-align: left importat!; color: #fff;background-color: #215a9a;">NOTICIAS</div>
-                    <a href="/noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="margin-left: 50%;"><b>Año </b>'. $item['anhoNoticia'] .'</a>
+                    <a href="noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="margin-left: 50%;"><b>Año </b>'. $item['anhoNoticia'] .'</a>
                 </div>
                     <div class="container-news" style="height: 400px;">
                         <img class="ajustar-margen" src="' . $path . '" style=" width: 100%;height: 45%; " alt="' . $titulo_noticia . '">
                         <div style="padding: 10px 10px;">                           
                             <div class="">
-                                <a href="/noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="color: #000000; text-decoration: none;">
+                                <a href="noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="color: #000000; text-decoration: none;">
                                     <b>' . $titulo_noticia . '</b><br><br>
                                     ' . substr($item['textoNoticia'], 0, 240) . '
                                 </a>
@@ -67,7 +67,7 @@ class NoticiaController {
                         <img class="ajustar-margen" src="' . $path . '" style=" width: 100%;" alt="' . $titulo_noticia . '">
                         <div class="overlay-news">
                             <div class="text-news">
-                                <a href="/noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="color: #fff; text-decoration: none;">
+                                <a href="noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="color: #fff; text-decoration: none;">
                                     ' . $titulo_noticia . '<br><br>
                                     ' . substr($item['textoNoticia'], 0, 240) . '
                                 </a>

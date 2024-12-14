@@ -1,7 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />-->
-<link rel="stylesheet" href="/sis/views/resources/lib/jquery-ui-themes-1.12.1/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="sis/views/resources/lib/jquery-ui-themes-1.12.1/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.pyramidGridRenderer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.pyramidAxisRenderer.min.js"></script>
@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.categoryAxisRenderer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasTextRenderer.min.js"></script>
-<script src="/sis/views/resources/jquery-number/jquery.number.min.js"></script>
+<script src="sis/views/resources/jquery-number/jquery.number.min.js"></script>
 <script>
     $(document).ready(function () {
         var ticks = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "75-79", "80+", ""];
@@ -356,7 +356,7 @@
     </div>
     <div class="row">
         <ul class="breadcrumb">
-            <li> <a href="/sis/index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li> <a href="sis/index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
             <li class="active"><a href="index.php?action=piramidePoblacional">Pirámide poblacional para Santiago de Cali</a></li>
         </ul>
     </div>
@@ -527,7 +527,7 @@
                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                     <b>PNG</b>
                 </button>
-                <img src="/sis/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                <img src="sis/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
             </div>
         </div>
     </div>

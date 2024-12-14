@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
 # Activar RewriteEngine
 RewriteEngine on
-#RewriteBase /sis 
+RewriteBase /siscali/
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 

@@ -36,18 +36,30 @@ class ConsultasController
                 if ($idDimension !== 'ODS_14' && $idDimension !== 'ODS_15') {
                     $icono = $dim['icono'];
                     $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
-                    echo
-                        "<div class='panel panel-default' style='border-radius: 8px 8px 0 0; margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
-                         <div class='panel-heading' style='border-color:white !important; font-size:2rem; background:{$color}; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px' style=''><h3 style='margin-left:20px; color:white; font-weight:semi-bold;'>{$nombreDimension}</h3></div>
-                        <div class='panel-body' style=' border-radius:10px'>
-                            <div class='row'>";
-
-                    // Llama a la función y concatena el resultado
+                    echo "
+<div class='panel-group' id='accordion-{$idDimension}' role='tablist' aria-multiselectable='true'
+    style='margin: 5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3); border-radius: 8px;'>
+    <div class='panel panel-default'>
+        <div class='panel-heading' role='tab' id='heading{$idDimension}' style='border-radius: 8px 8px 0 0; background: {$color}; display: flex; align-items: center; border-color: white !important;'>
+            <h4 class='panel-title' style='font-size: 2rem;'>
+                <a role='button' data-toggle='collapse' data-parent='#accordion-{$idDimension}' href='#collapse{$idDimension}' aria-expanded='true' aria-controls='collapse{$idDimension}' style='color: white; text-decoration: none;'>
+                    <img class='img-responsive' src='siscali/{$icono}' alt='asd' width='70px' style='margin-right: 20px;'>
+                    {$nombreDimension}
+                </a>
+            </h4>
+        </div>
+        <div id='collapse{$idDimension}' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading{$idDimension}'>
+            <div class='panel-body' style='border-radius: 10px;'>
+                <div class='row'>";
                     echo $this->consultarListadoIndicadoresActivosPorDimensionController($idDimension, $color, $tipoConsulta);
-                    // Cierra el panel
                     echo "</div>
-                        </div>
-                    </div>";
+            </div>
+        </div>
+    </div>
+</div>
+";
+
+
                 }
             }
         } else {
@@ -58,16 +70,29 @@ class ConsultasController
                 $icono = $dim['icono'];
                 $color = $dim['color'] == '' ? $colorSet[$nombreDimension] : $dim['color'];
                 // Inicia el panel
-                echo "<div class='panel panel-default' style='border-radius: 8px 8px 0 0; margin:5rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3);'>
-                    <div class='panel-heading' style='border-color:white !important; font-size:2rem; background:{$color}; display:flex; align-items:center; margin-bottom:2rem'><img class='img-responsive' src='{$icono}' alt='asd' width='70px' style='filter: brightness(100000%) hue-rotate(0deg) saturate(0%);'><h3 style='margin-left:20px; color:white; font-weight:semi-bold;'>{$nombreDimension}</h3></div>
-                    <div class='panel-body' style=' border-radius:10px'>
-                        <div class='row'>";
-                // Llama a la función y concatena el resultado
+                echo "
+<div class='panel-group' id='accordion-{$idDimension}' role='tablist' aria-multiselectable='true' style='margin:5rem;'>
+    <div class='panel panel-default' style='border-radius: 1rem; box-shadow: 0px 0px 9px 0px rgba(32,32,32,0.3); '>
+        <div class='panel-heading' role='tab' id='heading{$idDimension}' style='display:flex; align-items:center; background-color:{$color};'>
+            <img class='img-responsive' src='/siscali/{$icono}' alt='asd' width='70px' style='margin-left: 20px; filter: grayscale(1) brightness(100000%); '>    
+            
+        <a role='button' data-toggle='collapse' data-parent='#accordion-{$idDimension}' href='#collapse{$idDimension}' aria-expanded='true' aria-controls='collapse{$idDimension}' style='color: white; text-decoration: none; font-size:2rem; margin-left: 20px;'>
+            {$nombreDimension}
+            </a>
+            
+        </div>
+        <div id='collapse{$idDimension}' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading{$idDimension}'>
+            <div class='panel-body' style='border-radius: 10px;'>
+                <div class='row'>";
                 echo $this->consultarListadoIndicadoresActivosPorDimensionController($idDimension, $color, $tipoConsulta);
-                // Cierra el panel
-                echo "</div>
-                    </div>
-                </div>";
+                echo "
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";
+
+
             }
 
         }
@@ -190,7 +215,7 @@ class ConsultasController
                                     <div class='panel-body'>
                                         <div class='row'>
                                             <div class='col-md-3 hidden-sm hidden-xs'>
-                                                <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'><img src='/views/resources/images/dimensiones/N.png' style='width:100%; height:100%;'/></div>
+                                                <div style='width:80px; height:80px; background:linear-gradient({$color},white); border-radius:5px;'><img src='/siscali/views/resources/images/dimensiones/N.png' style='width:100%; height:100%;'/></div>
                                             </div>
                                             <div class='col-md-9' style='display:flex; align-items:center; justify-content:space-between;' >
                                                 <h4 class='panel-title tituloIndicador' id='title-{$indicadores[$i][1]}' style='font-weight:bold'>{$indicadores[$i][2]}</h4>
@@ -675,7 +700,7 @@ class ConsultasController
                     echo '      <p style="font-size: smaller;"><strong>Notas:</strong> ' . implode(" - ", $notas) . ' </p>';
                 }
                 if ($tipoConsulta == "ODRAF") {
-                    echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                    echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
                 }
 
                 echo "          <hr>
@@ -894,7 +919,7 @@ class ConsultasController
                     </div> 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <embed src="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
+                            <embed src="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
                         </div>
                     </div> 
                 </div> 
@@ -1003,7 +1028,7 @@ class ConsultasController
             }
             if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                 echo '          <p style="margin:0px; font-size:smaller;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                echo '          <p style="margin:0px; font-size:smaller;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                echo '          <p style="margin:0px; font-size:smaller;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
             }
 
             echo '   </div>
@@ -1034,7 +1059,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="/views/resources/images/loading3.gif" id="loadingPng' . $numeroGrafico . '" style="display: none; margin-left: 10px;"/>
+                                <img src="views/resources/images/loading3.gif" id="loadingPng' . $numeroGrafico . '" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>';
@@ -1280,15 +1305,14 @@ class ConsultasController
                         '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente));
                 }
                 echo '      <input type="text" id="link" hidden readonly value="' . $link . '" style="border:0; font-weight:bold; text-align:left;">';
-                echo '       
-                                </div>
+                echo '</div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12">
                                     <hr>
                                     <h4 style="text-align:left">Descargar gráfico</h4>
                                     <script>
-                                        var url = "/views/resources/js/descargarGrafico.js";
+                                        var url = "views/resources/js/descargarGrafico.js";
                                         $.getScript(url);
                                     </script>
                                     <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -1296,7 +1320,7 @@ class ConsultasController
                                             <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                             <b>PNG</b>
                                         </button>
-                                        <img src="/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                        <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                                     </div>
                                 </div>
                             </div>
@@ -1395,7 +1419,7 @@ class ConsultasController
                 }
                 if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                     echo '  <p style="margin:0px;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                    echo '  <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                    echo '  <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
                 }
                 echo "  </div>
                     </div>    
@@ -1513,7 +1537,7 @@ class ConsultasController
                 }
                 if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                     echo '          <p style="margin:0px;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                    echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                    echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
                 }
                 echo '          </div>
                         </div>';
@@ -1549,7 +1573,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -1643,7 +1667,7 @@ class ConsultasController
                     }
                     if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                         echo '      <p style="margin:0px;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                        echo '      <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                        echo '      <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
                     }
 
                     echo "          <hr>
@@ -1744,7 +1768,7 @@ class ConsultasController
                     }
                     if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                         echo '      <p style="margin:0px;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                        echo '      <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                        echo '      <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
                     }
 
                     echo "          <hr>
@@ -1967,7 +1991,7 @@ class ConsultasController
                     </div> 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <embed src="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
+                            <embed src="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
                         </div>
                     </div> 
                 </div> 
@@ -2168,7 +2192,7 @@ class ConsultasController
             }
             if ($tipoConsulta == "ODRAF" && $fuente == "Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali - Secretaría del Deporte y la Recreación") {
                 echo '          <p style="margin:0px;">Este indicador fue calculado con los resultados de la <strong>Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, realizada por el Observatorio del Deporte, la Recreación y la Actividad Física.</p>';
-                echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
             }
             echo '          </div>
                         </div>';
@@ -2195,7 +2219,7 @@ class ConsultasController
                             <hr>
                             <h4 style="text-align:left">Descargar gráfico</h4>
                             <script>
-                                var url = "/views/resources/js/descargarGrafico.js";
+                                var url = "views/resources/js/descargarGrafico.js";
                                 $.getScript(url);
                             </script>
                             <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -2203,7 +2227,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -2290,7 +2314,7 @@ class ConsultasController
                 echo '      <p style="font-size: smaller;"><strong>Notas:</strong> ' . implode(" - ", $notas) . ' </p>';
             }
             if ($tipoConsulta == "ODRAF") {
-                echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
+                echo '          <p style="margin:0px;">Para descargar la <strong>Ficha técnica de la Encuesta municipal de deporte, recreación y actividad física de Santiago de Cali</strong>, haz clic <a href="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" target="_blank"> aquí</a>.</p>';
             }
 
             echo "          <hr>
@@ -2509,7 +2533,7 @@ class ConsultasController
                     </div> 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <embed src="/public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
+                            <embed src="public/ODRAF/Ficha-técnica-Encuesta-ODRAF-2017.pdf" type="application/pdf" width="100%" height="800px" />
                         </div>
                     </div> 
                 </div> 
@@ -2674,7 +2698,7 @@ class ConsultasController
                                             <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                             <b>PNG</b>
                                         </button>
-                                        <img src="/views/resources/images/loading.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                        <img src="views/resources/images/loading.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                                     </div>
                                 </div>
                             </div>
@@ -3373,7 +3397,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -3777,7 +3801,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -4283,7 +4307,7 @@ class ConsultasController
                                        <h7 class = "col-sm-12" style="font-weight: 600;">' . $idIndicadorC . ' <br></h7>
                                        <h7 style = "text-align:justify; font-size: 13px;font-weight: 600; ">Periodicidad:</h7><h7 style = "text-align:justify;font-size: 13px; font-weight: 400; ">' . $periodicidad . '</h7>
                                     <div class = "col-sm-9" style = "padding-left:0px;padding-right: 8px;">
-                                        <a href="/views/resources/fichasDadii/' . $idIndicadorC . '.xlsx" download  title="Descargue la ficha técnica del indicador"> <h7 style = "text-align:justify; font-weight: 590; line-height: 1.4 !important;">' . $nombreIndicador . '
+                                        <a href="views/resources/fichasDadii/' . $idIndicadorC . '.xlsx" download  title="Descargue la ficha técnica del indicador"> <h7 style = "text-align:justify; font-weight: 590; line-height: 1.4 !important;">' . $nombreIndicador . '
                                         </h7>
                                         </a> 
                                     </div>
@@ -4414,19 +4438,19 @@ $(document).ready(function() {
                   <h4 class="glyphicon glyphicon-tasks"></h4><br/>Valores de referencia
                 </a>
                 <a href="#" class="list-group-item text-center">
-                <img src="/app/controller/documentos/DADII/Estratégico.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
+                <img src="app/controller/documentos/DADII/Estratégico.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
                   <h4 class="glyphicon"></h4><br/>Macroprocesos Estratégicos
                 </a>
                 <a href="#" class="list-group-item text-center">
-                <img src="/app/controller/documentos/DADII/Misional.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
+                <img src="app/controller/documentos/DADII/Misional.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
                   <h4 class="glyphicon"></h4><br/>Macroprocesos Misionales
                 </a>
                 <a href="#" class="list-group-item text-center">
-                <img src="/app/controller/documentos/DADII/Apoyo.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
+                <img src="app/controller/documentos/DADII/Apoyo.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
                   <h4 class="glyphicon"></h4><br/>Macroprocesos de Apoyo
                 </a>
                 <a href="#" class="list-group-item text-center">
-                <img src="/app/controller/documentos/DADII/Control Seguimiento.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
+                <img src="app/controller/documentos/DADII/Control Seguimiento.png" style="border-radius: 100px;width: 50px; margin-right:8px;">
                   <h4 class="glyphicon"></h4><br/>Macroprocesos de Seguimiento y Evaluación
                 </a>
               </div>
@@ -4514,7 +4538,7 @@ $(document).ready(function() {
             $nomProc = $tem->listarTematicasPorProceso($idConjunto, $nomD[0]);
             $P_estrategico = $nomProc[0];
             foreach ($P_estrategico as $row => $nomT) {
-                echo '  <a title="Consulte los indicadores."  href="/consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
+                echo '  <a title="Consulte los indicadores."  href="consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
             }
             echo '
                                                         </label>
@@ -4556,7 +4580,7 @@ $(document).ready(function() {
             $nomProc = $tem->listarTematicasPorProceso($idConjunto, $nomD[0]);
             $P_misional = $nomProc[1];
             foreach ($P_misional as $row => $nomT) {
-                echo '  <a title="Consulte los indicadores." href="/consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
+                echo '  <a title="Consulte los indicadores." href="consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
             }
             echo '
                                                    </label>
@@ -4596,7 +4620,7 @@ $(document).ready(function() {
             $nomProc = $tem->listarTematicasPorProceso($idConjunto, $nomD[0]);
             $P_apoyo = $nomProc[2];
             foreach ($P_apoyo as $row => $nomT) {
-                echo '  <a title="Consulte los indicadores." href="/consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
+                echo '  <a title="Consulte los indicadores." href="consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
             }
             echo '
                                                         </label>
@@ -4639,7 +4663,7 @@ $(document).ready(function() {
             $nomProc = $tem->listarTematicasPorProceso($idConjunto, $nomD[0]);
             $P_control = $nomProc[3];
             foreach ($P_control as $row => $nomT) {
-                echo ' <a title="Consulte los indicadores." href="/consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
+                echo ' <a title="Consulte los indicadores." href="consulta-indicadores/dadii/' . $nomD[0] . '/' . $nomT[0] . '"> <li><h7>' . $nomT[1] . '</h7></li> </a>';
             }
             echo '</label>
                                                 </div>
@@ -5399,7 +5423,7 @@ $(document).ready(function() {
 
         $year = $years[0];
 
-        echo '<link href="/views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">';
+        echo '<link href="views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">';
         echo "
             <script>
                 var allData = " . json_encode($dataAll, JSON_FORCE_OBJECT) . ";
@@ -7021,30 +7045,30 @@ $(document).ready(function() {
 
         switch ($tipoConsulta) {
             case 'Comunas':
-                $link = '/consulta-indicadores/dimensiones-sis-comunas/' . $idDimension . '/' . $idTematica . '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
+                $link = '/siscali/consulta-indicadores/dimensiones-sis-comunas/' . $idDimension . '/' . $idTematica . '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'SIS':
-                $link = '/consulta-indicadores/dimensiones-sis/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/dimensiones-sis/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'IGC':
-                $link = '/consulta-indicadores/igc/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/igc/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'EXP':
-                $link = '/consulta-indicadores/exp/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/exp/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . $tipoZonaGeografica . '/' . urlencode(implode(",", $desagregacionesTematicas)) . '/' . implode(",", $fchs) . '/' . $zonaGeografica;
                 break;
             case 'PIIA':
-                $link = '/consulta-indicadores/piia/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/piia/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'ODRAF':
-                $link = '/consulta-indicadores/odraf/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/odraf/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             default:
-                $link = '/consulta-indicadores/' . strtolower($tipoConsulta) . '/' . $idDimension . '/' . $idTematica .
+                $link = '/siscali/consulta-indicadores/' . strtolower($tipoConsulta) . '/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
         }
@@ -7206,7 +7230,7 @@ $(document).ready(function() {
             if ($cont >= 4) {
                 echo '<div class="m-widget4__item diferent_visibility">
                         <div class="m-widget4__img m-widget4__img--pic">
-                            <img src="/views/resources/images/home/logos/' . $icono . '.png" alt="">
+                            <img src="views/resources/images/home/logos/' . $icono . '.png" alt="">
                         </div>
                         <div class="m-widget4__info">
                             <span class="m-widget4__title">
@@ -7226,7 +7250,7 @@ $(document).ready(function() {
             } else {
                 echo '<div class="m-widget4__item">
                         <div class="m-widget4__img m-widget4__img--pic">
-                            <img src="/views/resources/images/home/logos/' . $icono . '.png" alt="">
+                            <img src="views/resources/images/home/logos/' . $icono . '.png" alt="">
                         </div>
                         <div class="m-widget4__info">
                             <span class="m-widget4__title">

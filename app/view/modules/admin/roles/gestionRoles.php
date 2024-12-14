@@ -18,6 +18,7 @@ if (!$crear && !$modificar && !$eliminar) {
 ?>
 <html>
     <head>
+        
         <?php include 'view/modules/head.php'; ?>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         

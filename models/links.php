@@ -92,7 +92,7 @@ class UrlsModels {
             $module = "views/modules/home.php";
         } else {
             $module = "";
-            echo '<script>window.location.replace("/");</script>';
+            echo '<script>window.location.replace("/siscali");</script>';
         }
         return $module;
     }

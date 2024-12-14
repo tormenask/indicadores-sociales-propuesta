@@ -1,10 +1,10 @@
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li><a href="/consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo Social</a></li>
-        <li class="active"><a href="/consulta-indicadores/dimensiones-sis/analisis">Análisis descriptivo de indicadores sociales</a></li>
+        <li><a href="consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo Social</a></li>
+        <li class="active"><a href="consulta-indicadores/dimensiones-sis/analisis">Análisis descriptivo de indicadores sociales</a></li>
     </ul>
 </div>
 <div class="row">
@@ -33,7 +33,7 @@
                             <td>Análisis descriptivo de los indicadores del desarrollo social para Santiago de Cali - 2022</td>
                             <td style="text-align:center">2022</td>
                             <td style="text-align:center">
-                                <a href="/public/SIS/Analisis-descriptivo-indicadores-sociales-2022.pdf" target="_blank">
+                                <a href="public/SIS/Analisis-descriptivo-indicadores-sociales-2022.pdf" target="_blank">
                                     <i class="fa fa-file-pdf-o" style="font-size:48px;color:red;  "></i>
                                 </a>
                             </td>
@@ -42,7 +42,7 @@
                             <td>Análisis descriptivo de los indicadores del desarrollo social para Santiago de Cali - 2019</td>
                             <td style="text-align:center">2019</td>
                             <td style="text-align:center">
-                                <a href="/public/SIS/Analisis-descriptivo-indicadores-sociales-2019.pdf" target="_blank">
+                                <a href="public/SIS/Analisis-descriptivo-indicadores-sociales-2019.pdf" target="_blank">
                                     <i class="fa fa-file-pdf-o" style="font-size:48px;color:red;  "></i>
                                 </a>
                             </td>

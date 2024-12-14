@@ -1,6 +1,6 @@
 <div class="container">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link href="/views/resources/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="views/resources/css/custom.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap.min.css">    
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">

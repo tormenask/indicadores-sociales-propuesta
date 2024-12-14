@@ -6,7 +6,7 @@ class LinkBack {
         if (isset($_GET["action"])) {
             $links = $_GET["action"];
         } else {
-            $links = "index";
+            $links = "siscali/index";
         }
         $link = new LinkModelBack();
         $resp = $link->linksModelBack($links);

@@ -1,9 +1,9 @@
 <?php include 'views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li><a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li><a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li><?php echo $categoria; ?></li>
-        <li class="active"><a href="/<?php echo $url; ?>"><?php echo $titulo; ?></a></li>
+        <li class="active"><a href="<?php echo $url; ?>"><?php echo $titulo; ?></a></li>
     </ul>
 </div>
 <div class="row">

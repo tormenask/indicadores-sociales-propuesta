@@ -5,8 +5,8 @@ include_once 'controllers/noticias.php';
 <?php include 'views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
-        <li class="active"><a href="/noticias">Noticias</a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li class="active"><a href="noticias">Noticias</a></li>
     </ul>
 </div>
 <div class="row">

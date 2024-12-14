@@ -1,10 +1,10 @@
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li><a href="/consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo Social</a></li>
-        <li class="active"><a href="/consulta-indicadores/dimensiones-sis/presentacion">Presentación</a></li>
+        <li><a href="consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo Social</a></li>
+        <li class="active"><a href="consulta-indicadores/dimensiones-sis/presentacion">Presentación</a></li>
     </ul>
 </div>
 <div class="row">

@@ -1,12 +1,12 @@
 <?php include 'views/modules/header.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@0.2.2"></script>
-<script src="/views/resources/js/ods-script.js"></script>
+<script src="views/resources/js/ods-script.js"></script>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li class="active"><a href="/consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo
+        <li class="active"><a href="consulta-indicadores/dimensiones-sis">Indicadores para la medición del Desarrollo
                 Social</a></li>
     </ul>
 </div>
@@ -14,8 +14,8 @@
     <div class="col-xs-12 col-sm-4 col-md-12 col-lg-12"
         style="display:flex; align-items:center; justify-content: center; margin-top:3rem;">
         <article style="display: flex; justify-content:center; align-items:center;">
-            <a href="/consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF; display: flex; justify-content:center; align-items:center; flex-direction:column">
-                <img src="/views/resources/images/home/dimensiones_sis.png"
+            <a href="consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF; display: flex; justify-content:center; align-items:center; flex-direction:column">
+                <img src="views/resources/images/home/dimensiones_sis.png"
                     alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social, por comunas"
                     style=" border-radius: 150px; width: 50%; margin-top: -65px;" />
                 <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo

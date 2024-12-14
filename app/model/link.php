@@ -79,21 +79,21 @@ class LinkModelBack {
                 || $link == "admin/logs/gestionLogs"
                 || $link == "admin/notificaciones/gestionNotificaciones"
                 ) {
-            $module = "view/modules/" . $link . ".php";
-        } elseif ($link == "index") {
-            $module = "view/modules/login.php";
-        } elseif ($link == "recuperar-contrasena") {
-            $module = "view/modules/recuperar.php";
-        } elseif ($link == "app") {
-            $module = "view/modules/login.php";
-        } elseif ($link == "admin/salir") {
-            $module = "view/modules/salir.php";
-        } elseif ($link == "admin/gestionIndicadores") {
-            $module = "view/modules/administracion/indicadores/gestionIndicadores.php";
-        } elseif ($link == "login/error") {
-            $module = "view/modules/error.php";
+            $module = "siscali/view/modules/" . $link . ".php";
+        } elseif ($link == "siscali/index") {
+            $module = "siscali/view/modules/login.php";
+        } elseif ($link == "siscali/recuperar-contrasena") {
+            $module = "siscali/view/modules/recuperar.php";
+        } elseif ($link == "siscali/app") {
+            $module = "siscali/view/modules/login.php";
+        } elseif ($link == "siscali/admin/salir") {
+            $module = "siscali/view/modules/salir.php";
+        } elseif ($link == "siscali/admin/gestionIndicadores") {
+            $module = "siscali/view/modules/administracion/indicadores/gestionIndicadores.php";
+        } elseif ($link == "siscali/login/error") {
+            $module = "siscali/view/modules/error.php";
         } else {
-            $module = "view/modules/login.php";
+            $module = "siscali/view/modules/login.php";
         }
         return $module;
     }

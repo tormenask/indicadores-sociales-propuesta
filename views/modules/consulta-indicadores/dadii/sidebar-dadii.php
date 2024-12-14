@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="/views/resources/images/home/logoDadii.png" style="height: 90px;" alt="Imagen de presentación del Departamento Administrativo de Desarrollo e Innovación Institucional" style="height: 90px;"/>    
+        <img src="views/resources/images/home/logoDadii.png" style="height: 90px;" alt="Imagen de presentación del Departamento Administrativo de Desarrollo e Innovación Institucional" style="height: 90px;"/>    
     </div>    
     <!--<div class="sidebar-nav">-->     
     <div class="panel-group" id="accordion">
@@ -37,7 +37,7 @@ $resp = new ConsultasController();
             </div>
             <div id="informacion-conjunto" class="panel-collapse collapse in">
                 <ul class="list-group" style="font-size: 13px;">
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/dadii/presentacion">Presentación</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/dadii/presentacion">Presentación</a></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +65,7 @@ $resp = new ConsultasController();
                 </h4>
             </div> 
         </div> 
-        <a href="/consulta-indicadores/dadii/GENERALIDADES/INDICADORES" class="panel panel-default list-group-item indicadores-titulos" >Indicadores de gestión</a>
+        <a href="consulta-indicadores/dadii/GENERALIDADES/INDICADORES" class="panel panel-default list-group-item indicadores-titulos" >Indicadores de gestión</a>
         <div class="panel panel-default">
             <div class="panel-heading" style="background-color: #2fb56a;">
                 <h4 class="panel-title" style="font-size: 14px; color: #fff;">
@@ -93,7 +93,7 @@ $resp = new ConsultasController();
                 var resp = "<div class='alert alert-danger alert-dismissable'>\n\
                 Error al realizar la búsqueda.<br>\n\
                 Debe ingresar al menos tres caracteres para realizar la búsqueda. <br>\n\
-                Para volver a la página principal, haga clic <a href='/consulta-indicadores/dadii/' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
+                Para volver a la página principal, haga clic <a href='consulta-indicadores/dadii/' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n\
                 </div>";
                 $('#tabsTematica').html(resp);
                 $('#tabsTematica').show();

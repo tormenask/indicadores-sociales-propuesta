@@ -15,7 +15,7 @@
 </div>
 <div class="col-xs-12 col-sm-4 footer footer-resp" style="text-align: center;">
     <img alt="Alcaldía de Santiago de Cali" style="height: 100px; margin-top:-15px"
-         src="/views/resources/images/escudos.png">
+         src="views/resources/images/escudos.png">
 </div>
 <script>
     $('ul.nav li.dropdown').hover(function () {

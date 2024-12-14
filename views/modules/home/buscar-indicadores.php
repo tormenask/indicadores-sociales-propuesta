@@ -25,7 +25,7 @@ class ConsultarIndicadores {
         if ($resp == "empty") {
             echo "   <div class='alert alert-info alert-dismissable'>\n
                         No existen indicadores con el parámetro ingresado.<br>\n
-                        Para volver a la página principal, haga clic <a href='/' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n
+                        Para volver a la página principal, haga clic <a href='/siscali' id='btn-accept' class='alert-link'><strong>aquí.</strong></a>\n
                     </div>";
         } else {
             $this->crearTabla($resp, $data);

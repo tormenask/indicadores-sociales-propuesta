@@ -51,8 +51,8 @@ justify-content: center; }
 
 <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-<script src="/views/resources/js/jquery.rcounterup-numero-indicadores.js"></script>
-<script src="/views/resources/js/active-numero-indicadores.js"></script>
+<script src="views/resources/js/jquery.rcounterup-numero-indicadores.js"></script>
+<script src="views/resources/js/active-numero-indicadores.js"></script>
 
 
 <script type="text/javascript">

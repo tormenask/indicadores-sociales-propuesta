@@ -20,9 +20,9 @@
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="index.php" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li class="active"><a href="/consulta-indicadores/dadii">Visualizador de indicadores del Departamento Administrativo de Desarrollo e Innovación Institucional</a></li>
+        <li class="active"><a href="consulta-indicadores/dadii">Visualizador de indicadores del Departamento Administrativo de Desarrollo e Innovación Institucional</a></li>
     </ul>
 </div>
 <div class="row">

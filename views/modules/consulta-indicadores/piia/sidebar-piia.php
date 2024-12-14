@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="/views/resources/images/home/indicadores_piia.png" alt="Imagen de presentación de los Indicadores de la Política de Primera Infancia, Infancia y Adolescencia" style="height: 90px;"/><h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores de la Política de Primera Infancia, Infancia y Adolescencia</h6>
+        <img src="views/resources/images/home/indicadores_piia.png" alt="Imagen de presentación de los Indicadores de la Política de Primera Infancia, Infancia y Adolescencia" style="height: 90px;"/><h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores de la Política de Primera Infancia, Infancia y Adolescencia</h6>
     </div>
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
@@ -36,8 +36,8 @@ $resp = new ConsultasController();
             </div>
             <div id="informacion-conjunto" class="panel-collapse collapse in">
                 <ul class="list-group" style="font-size: 13px;">
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/piia/presentacion">Presentación</a></li>
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/piia/documentos-interes">Documentos de interés</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/piia/presentacion">Presentación</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/piia/documentos-interes">Documentos de interés</a></li>
                 </ul>
             </div>
         </div>

@@ -1,9 +1,9 @@
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
-        <li> <a href="/" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
+        <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
         <li>Consulta de Indicadores</li>
-        <li class="active"><a href="/consulta-indicadores/igc">Indicadores Globales de Ciudad</a></li>
+        <li class="active"><a href="consulta-indicadores/igc">Indicadores Globales de Ciudad</a></li>
     </ul>
 </div>
 <div class="row">

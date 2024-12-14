@@ -4,7 +4,7 @@ require_once './models/consultas_visualizadores.php';
 ?>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@0.2.2"></script>
-<script src="/views/resources/js/ods-script.js"></script>
+<script src="views/resources/js/ods-script.js"></script>
 <div class="col-12">
     <div id="page-content-wrapper">
         <div id="text-index">

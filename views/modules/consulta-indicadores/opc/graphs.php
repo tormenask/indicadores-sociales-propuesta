@@ -145,13 +145,13 @@
     </div>
 </div>
 
-<script src="/views/resources/opc/lib/js/underscore-min.js"></script>
-<script src="/views/resources/opc/lib/js/crossfilter.js"></script>
-<script src="/views/resources/opc/lib/js/d3.min.js"></script>
-<script src="/views/resources/opc/lib/js/dc.min.js"></script> 
-<script src="/views/resources/opc/lib/js/queue.js"></script>
-<script src="/views/resources/opc/lib/js/leaflet.js"></script>
-<script src="/views/resources/opc/lib/js/keen.min.js"></script>
+<script src="views/resources/opc/lib/js/underscore-min.js"></script>
+<script src="views/resources/opc/lib/js/crossfilter.js"></script>
+<script src="views/resources/opc/lib/js/d3.min.js"></script>
+<script src="views/resources/opc/lib/js/dc.min.js"></script> 
+<script src="views/resources/opc/lib/js/queue.js"></script>
+<script src="views/resources/opc/lib/js/leaflet.js"></script>
+<script src="views/resources/opc/lib/js/keen.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Edmonton-Open-Data/Edmonton-Bylaw-Infractions-II@master/libs/dc_addons/base-map-chart.js"></script>
-<script src='/views/resources/opc/lib/js/dc.leaflet.js'></script>
-<script src='/views/resources/opc/js/graphs.js' type='text/javascript'></script>
+<script src='views/resources/opc/lib/js/dc.leaflet.js'></script>
+<script src='views/resources/opc/js/graphs.js' type='text/javascript'></script>

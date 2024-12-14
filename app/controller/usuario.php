@@ -34,9 +34,9 @@ class UsuarioController {
                             <div class="col-sm-3" style="text-align:center;">';
 
         if ($resp['genero'] == "Femenino") {
-            echo '<img alt = "Imagen de usuario" src = "/app/view/resources/images/login-female.png" class = "img-circle img-responsive">';
+            echo '<img alt = "Imagen de usuario" src = "app/view/resources/images/login-female.png" class = "img-circle img-responsive">';
         } elseif ($resp['genero'] == "Masculino") {
-            echo '<img alt = "Imagen de usuario" src = "/app/view/resources/images/login-male.png" class = "img-circle img-responsive">';
+            echo '<img alt = "Imagen de usuario" src = "app/view/resources/images/login-male.png" class = "img-circle img-responsive">';
         }
         echo '              </div>
                             <div class="col-sm-9">

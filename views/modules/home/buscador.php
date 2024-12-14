@@ -1,6 +1,6 @@
 <div class="row row-header" id="consultaOtros" style="display: none; margin-top: -3px;">
     <div class="col-xs-12 col-sm-2 row-searcher" style="color: #fff;">
-        <a href="/app/index.php" class="btn btn-searcher" style="background-color: #215a9a; color: #fff; width: 100%;">
+        <a href="app/index.php" class="btn btn-searcher" style="background-color: #215a9a; color: #fff; width: 100%;">
             Iniciar sesión
         </a>
     </div>

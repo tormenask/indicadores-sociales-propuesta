@@ -72,7 +72,7 @@
                     .oculto-icon ul li:hover {background:#FFF;color:#000}
                     .oculto-icon input[type=text] { font-size:13px;padding:5px;margin:0 0 10px 0;border:1px solid #ddd; }
                 </style>
-                <script src="/sis/app/view/resources/js/icos.js"></script>
+                <script src="sis/app/view/resources/js/icos.js"></script>
                 <script>
                     $(document).ready(function () {
                         $(".picker").each(function () {

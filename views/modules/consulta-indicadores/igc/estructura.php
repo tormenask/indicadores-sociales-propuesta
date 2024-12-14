@@ -14,7 +14,7 @@
                     <div class="col-sm-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <img src="/views/resources/images/igc/estructura/servicios_ciudad.png" 
+                                <img src="views/resources/images/igc/estructura/servicios_ciudad.png" 
                                      class="img-circle img-dim" alt="Categoría: Servicios de Ciudad">
                                 <h3 class="panel-title text-title">
                                     Servicios de Ciudad
@@ -48,7 +48,7 @@
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
-                                    <img src="/views/resources/images/igc/estructura/calidad_vida.png" 
+                                    <img src="views/resources/images/igc/estructura/calidad_vida.png" 
                                          class="img-circle img-dim" alt="Categoría: Calidad de vida">
                                     Calidad de vida
                                 </h3>

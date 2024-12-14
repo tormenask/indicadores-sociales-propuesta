@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="/views/resources/images/home/indicadores_odraf.png" alt="Imagen de presentación de los Indicadores Observatorio del Deporte, la Recreación y la Actividad Física" style="height: 90px;"/>
+        <img src="views/resources/images/home/indicadores_odraf.png" alt="Imagen de presentación de los Indicadores Observatorio del Deporte, la Recreación y la Actividad Física" style="height: 90px;"/>
     </div>
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
@@ -36,7 +36,7 @@ $resp = new ConsultasController();
             </div>
             <div id="informacion-conjunto" class="panel-collapse collapse in">
                 <ul class="list-group" style="font-size: 13px;">
-                    <li class="list-group-item"><a style="color: #000;" href="/consulta-indicadores/odraf/presentacion">Presentación</a></li>
+                    <li class="list-group-item"><a style="color: #000;" href="consulta-indicadores/odraf/presentacion">Presentación</a></li>
                 </ul>
             </div>
         </div>

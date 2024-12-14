@@ -41,7 +41,7 @@ require_once 'controllers/seriesDatos.php';
     font-weight: 600
 }
 </style>
-<script src="/views/resources/lib/jQCloud/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script src="views/resources/lib/jQCloud/jqcloud/jqcloud-1.0.4.min.js"></script>
 
 <div class="row margin-infodatos">
 <div class="col-xs-12 col-sm-4">
@@ -62,7 +62,7 @@ require_once 'controllers/seriesDatos.php';
                                         <h3 class="center-tittle diferent_visibility" style="color: #07812d;">EFICACIA</h3>
                                         <p class="diferent_visibility">Mide el logro de los resultados propuestos y provee información sobre el grado en el que se realizan las actividades planificadas y la capacidad...</p>
                                         <div class="bottom diferent_visibility_btn" style="padding: 5px; background-color: #07812d; color: #fff;">
-                                            <a href="/informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
+                                            <a href="informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
                                         </div>
                                     </div>                                       
                                 </div>
@@ -75,7 +75,7 @@ require_once 'controllers/seriesDatos.php';
                                         <h3 class="center-tittle diferent_visibility" style="color: #07812d;">FRECUENCIA DE MEDICIÓN</h3>
                                         <p class="diferent_visibility">Periodo de tiempo con el que se realiza la medición de un indicador los cuales pueden ser: mensual...</p>
                                         <div class="bottom diferent_visibility_btn" style="padding: 5px; background-color: #07812d; color: #fff;">
-                                            <a href="/informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
+                                            <a href="informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@ require_once 'controllers/seriesDatos.php';
                                         <h3 class="center-tittle diferent_visibility" style="color: #07812d;">INDICE</h3>
                                         <p class="diferent_visibility">Es una cifra que indica la evolución o cambio, con el tiempo o de un lugar a otro, de una cantidad que es descriptiva del volumen de un agregado...</p>
                                         <div class="bottom diferent_visibility_btn" style="padding: 5px; background-color: #07812d; color: #fff;">
-                                            <a href="/informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
+                                            <a href="informacion-interes/glosario" style="color:#fff; font-weight: bold;">Ver glosario</a>
                                         </div>
                                     </div>
                                 </div>
