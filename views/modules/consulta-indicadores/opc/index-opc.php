@@ -38,7 +38,7 @@
 <script>
     $("#page-content-wrapper").LoadingOverlay("show", {
         background: "rgba(255, 255, 255, 0.5)",
-        image: "/views/resources/images/cube_load.gif"
+        image: "/siscali/views/resources/images/cube_load.gif"
     });
     setTimeout(function () {
         $("#page-content-wrapper").LoadingOverlay("hide");

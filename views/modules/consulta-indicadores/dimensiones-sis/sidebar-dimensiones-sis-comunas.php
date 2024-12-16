@@ -21,13 +21,13 @@ require_once 'models/consultas.php';
 $resp = new ConsultasController();
 ?>
 
-<link href="views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">
+<link href="/siscali/views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="views/resources/css/map.css" media="all">
+<link rel="stylesheet" href="/siscali/views/resources/css/map.css" media="all">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="views/resources/lib/jquery-number/jquery.number.min.js"></script>
+<script src="../views/resources/lib/jquery-number/jquery.number.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.pyramidGridRenderer.min.js"></script>
@@ -40,7 +40,7 @@ $resp = new ConsultasController();
 
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center; margin: 5rem;">
-        <img src="views/resources/images/home/indicadores_comunas.png"
+        <img src="/siscali/views/resources/images/home/indicadores_comunas.png"
             alt="Imagen de presentación de los Indicadores por comunas" style="height: 90px;" />
         <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la medición del desarrollo social, por comunas
         </h6>
@@ -83,7 +83,7 @@ $resp = new ConsultasController();
                             </p>
                         </div>
                         <div id="mapa" style="margin-top: -25px;"></div>
-                        <script src="views/resources/js/perfiles-comunas-script.js"></script>
+                        <script src="../views/resources/js/perfiles-comunas-script.js"></script>
                         <br>
                     </div>
                     <div class="col-sm-7 col-xs-12"
@@ -215,7 +215,7 @@ $resp = new ConsultasController();
                 <div class="row">
                     <div class="col-sm-12" style="margin-left: -30px;">
                         <script>
-                            var url = "/views/resources/js/descargarGrafico.js";
+                            var url = "/siscali/views/resources/js/descargarGrafico.js";
                             $.getScript(url);
                         </script>                            
                         <div class="btn-group" role="group" style="width:100%;">
@@ -223,7 +223,7 @@ $resp = new ConsultasController();
                                 <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                 <b>Descargar gráfico</b>
                             </button>
-                            <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                            <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                         </div>
                     </div>
                 </div>
@@ -235,5 +235,5 @@ $resp = new ConsultasController();
 <?php
 $resp->consultarListadoIndicadoresPorConjunto('SIS', 'Comunas');
 ?>
-<script src="views/resources/js/scriptMapa.js"></script>
+<script src="/siscali/views/resources/js/scriptMapa.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

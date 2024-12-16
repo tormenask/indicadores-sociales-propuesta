@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/indicadores_piia.png" alt="Imagen de presentación de los Indicadores de la Política de Primera Infancia, Infancia y Adolescencia" style="height: 90px;"/><h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores de la Política de Primera Infancia, Infancia y Adolescencia</h6>
+        <img src="/siscali/views/resources/images/home/indicadores_piia.png" alt="Imagen de presentación de los Indicadores de la Política de Primera Infancia, Infancia y Adolescencia" style="height: 90px;"/><h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores de la Política de Primera Infancia, Infancia y Adolescencia</h6>
     </div>
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">

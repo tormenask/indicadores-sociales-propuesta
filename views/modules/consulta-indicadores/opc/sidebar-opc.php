@@ -1,5 +1,5 @@
 <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-    <img src="views/resources/images/home/indicadores_opc.png" alt="Imagen de presentación del Visualizador de datos del Observatorio de Paz y Convivencia" style="height: 65px;"/>
+    <img src="/siscali/views/resources/images/home/indicadores_opc.png" alt="Imagen de presentación del Visualizador de datos del Observatorio de Paz y Convivencia" style="height: 65px;"/>
 </div>
 <div class="sidebar-nav">     
     <div class="panel-group" id="accordion">

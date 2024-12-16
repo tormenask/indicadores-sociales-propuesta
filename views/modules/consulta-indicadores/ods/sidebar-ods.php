@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin: 5rem;">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/ODS-circulo.png"
+        <img src="/siscali/views/resources/images/home/ODS-circulo.png"
             alt="Imagen de presentación de los Objetivos de Desarrollo Sostenible para Santiago de Cali"
             style="height: 90px;" />
         <h6 style="font-weight: 700; font-size: 2.0rem;">Objetivos de Desarrollo Sostenible para Santiago de Cali

@@ -32,7 +32,7 @@ require_once './models/indicadores.php';
                             <div class="row border-consulta" style="padding-bottom:0px !important;">
                                 <div class = "col-xs-12 col-sm-3">
                                     <img alt="' . $nombreObjetivo . '" style="width: 100%;margin: 15px 0px;" 
-                                        src="' . $iconoObjetivo . '">
+                                        src="/siscali/' . $iconoObjetivo . '">
                                 </div>
                                 <div class="col-xs-12 col-sm-9">
                                     <h4 style="font-weight:bold;">' . $nombreObjetivo . '</h4>

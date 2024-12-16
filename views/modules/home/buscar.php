@@ -20,7 +20,7 @@
 <script>
        $.LoadingOverlaySetup({
         background: "rgba(255, 255, 255, 0.5)",
-        image           : "/views/resources/images/cube_load.gif",
+        image           : "/siscali/views/resources/images/cube_load.gif",
         imageAnimation  : "3.5s fadein",
         imageColor      : "#ffcc00"
     });
@@ -33,7 +33,7 @@
     // jQuery(document).ready(function () {
     //     $.LoadingOverlay("show", {
     //         background: "rgba(255, 255, 255, 0.8)",
-    //         image: "/views/resources/images/cube_load.gif"
+    //         image: "/siscali/views/resources/images/cube_load.gif"
     //     });
     //     setTimeout(function () {
     //         $.LoadingOverlay("hide");
@@ -65,7 +65,7 @@ function buscarIndicador($param) {
             } else {
                 var data = new FormData();
                 data.append('param', param);
-                var url = "/views/modules/home/buscar-indicadores.php";
+                var url = "/siscali/views/modules/home/buscar-indicadores.php";
                 $.ajax({
                     type: "POST",
                     url: url,

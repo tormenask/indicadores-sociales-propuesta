@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/indicadores_odraf.png" alt="Imagen de presentación de los Indicadores Observatorio del Deporte, la Recreación y la Actividad Física" style="height: 90px;"/>
+        <img src="/siscali/views/resources/images/home/indicadores_odraf.png" alt="Imagen de presentación de los Indicadores Observatorio del Deporte, la Recreación y la Actividad Física" style="height: 90px;"/>
     </div>
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">

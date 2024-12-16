@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.categoryAxisRenderer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasTextRenderer.min.js"></script>
-<script src="views/resources/lib/jquery-number/jquery.number.min.js"></script>
+<script src="../views/resources/lib/jquery-number/jquery.number.min.js"></script>
 <?php include './views/modules/header.php'; ?>
 <div class="row">
     <ul class="breadcrumb">
@@ -36,7 +36,7 @@
                     </p>
                 </div>
                 <div id="mapa" style="margin-top: -25px;"></div>
-                <script src="views/resources/js/calidad-educativa-script.js"></script>
+                <script src="../views/resources/js/calidad-educativa-script.js"></script>
                 <br>
             </div>
             <div class="col-xs-12 col-sm-8" style="background-color: #eee; padding: 0px; border: 1px solid #ccc;">
@@ -68,7 +68,7 @@
         } else {
             var data = new FormData();
             data.append('selected', selected);
-            var url = "/views/modules/consulta-indicadores/calidad-educativa/consultas-calidad-educativa.php";
+            var url = "/siscali/views/modules/consulta-indicadores/calidad-educativa/consultas-calidad-educativa.php";
             $.ajax({
                 type: "POST",
                 url: url,

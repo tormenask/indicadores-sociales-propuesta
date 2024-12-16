@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
   
-    fetch("/views/resources/geojson/comunas.geojson")
+    fetch("/siscali/views/resources/geojson/comunas.geojson")
       .then((response) => response.json())
       .then((data) => {
         console.log(JSON.stringify(data));

@@ -49,7 +49,7 @@
     });
     function listarIndicadores() {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/dadii/consultas.php";
+        var url = "/siscali/views/modules/consulta-indicadores/dadii/consultas.php";
         var conjuntoIndicador = "DADII";
         data.append("conjuntoIndicador", conjuntoIndicador);
         $.ajax({
@@ -72,7 +72,7 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && $_GET['idDim'] == "GENERAL
     ?> <script>
         $("#tabsTematica").LoadingOverlay("show", {
             background: "rgba(255, 255, 255, 0.5)",
-            image: "/views/resources/images/cube_load.gif"
+            image: "/siscali/views/resources/images/cube_load.gif"
         });
         setTimeout(function () {
             $("#tabsTematica").LoadingOverlay("hide");
@@ -81,7 +81,7 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && $_GET['idDim'] == "GENERAL
         var idConjunto = 'DADII';
         var data = new FormData();
         data.append('idConjunto', idConjunto);
-        var url = "/views/modules/consulta-indicadores/dadii/consultas.php";
+        var url = "/siscali/views/modules/consulta-indicadores/dadii/consultas.php";
         $.ajax({
             type: "POST",
             url: url,
@@ -111,7 +111,7 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && $_GET['idDim'] == "GENERAL
         <script>
             $("#tabsTematica").LoadingOverlay("show", {
                 background: "rgba(255, 255, 255, 0.5)",
-                image: "/views/resources/images/cube_load.gif"
+                image: "/siscali/views/resources/images/cube_load.gif"
             });
             setTimeout(function () {
                 $("#tabsTematica").LoadingOverlay("hide");
@@ -122,7 +122,7 @@ if (isset($_GET['idDim']) && isset($_GET['idTem']) && $_GET['idDim'] == "GENERAL
             var data = new FormData();
             data.append('idDimensionC', idDimension);
             data.append('idTematicaC', idTematica);
-            var url = "/views/modules/consulta-indicadores/dadii/consultas.php";
+            var url = "/siscali/views/modules/consulta-indicadores/dadii/consultas.php";
             $.ajax({
                 type: "POST",
                 url: url,

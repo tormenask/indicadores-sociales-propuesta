@@ -43,7 +43,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         //Para overlay
         $.LoadingOverlaySetup({
         background: "rgba(255, 255, 255, 0.5)",
-        image           : "/views/resources/images/cube_load.gif",
+        image           : "/siscali/views/resources/images/cube_load.gif",
         imageAnimation  : "3.5s fadein",
         imageColor      : "#ffcc00"
     });
@@ -75,7 +75,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         data.append('desagregaciones', JSON.stringify(desagregaciones));
         data.append('fechas', JSON.stringify(fechas));
         data.append('zonas', JSON.stringify(zonas));
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         $.ajax({
             type: "POST",
             url: url,
@@ -110,7 +110,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 <script>
     function consultarDesagregacionesGeograficas(idIndicador) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicadorODRAF", idIndicador);
         $.ajax({
             type: "POST",
@@ -129,7 +129,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
     }
     function consultarDesagregacionesTematicas(idIndicador, desagregacionesGeograficas) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador2", idIndicador);
         data.append("desagregacionesGeograficas2", desagregacionesGeograficas);
         $.ajax({
@@ -148,7 +148,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
     }
     function consultarFechas(idIndicador, fuente, desagregacionesGeograficas, desagregacionesTematicas) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador3", idIndicador);
         data.append("fuente3", fuente);
         data.append("desagregacionesGeograficas3", desagregacionesGeograficas);

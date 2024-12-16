@@ -153,7 +153,7 @@ $resp = new ConsultasController();
                         </p>
                         <br>
                         <div style="text-align: center; justify-content:center; display:flex">
-                            <img src="views/resources/images/sis/desarrollo_social.png" class="img-responsive"
+                            <img src="/siscali/views/resources/images/sis/desarrollo_social.png" class="img-responsive"
                                 style="width: 50%;" alt="Desarrollo Social">
                             <h6>Fuente: Elaboración Equipo SIS</h6>
                         </div>

@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper" style="margin:5rem;">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/indicadores_expediente_municipal.png"
+        <img src="/siscali/views/resources/images/home/indicadores_expediente_municipal.png"
             alt="Imagen de presentación de los Indicadores del Expediente Municipal" style="height: 90px;" />
         <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores del Expediente Municipal</h6>
     </div>

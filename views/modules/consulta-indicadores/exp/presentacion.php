@@ -11,7 +11,7 @@
                     El Expediente Municipal, establecido por la Ley 388 de 1997 (Art. 112) como instrumento de consulta y monitoreo, favorece el empoderamiento de la ciudadanía y busca darle transparencia al proceso de desarrollo del territorio y mejoramiento de la calidad de vida de los caleños. Es por esto que debe estar en constante actualización.
                 </p>
                 <br>
-                <img src= "/views/resources/images/exp/presentacion.jpg"
+                <img src= "/siscali/views/resources/images/exp/presentacion.jpg"
                      alt="Presentación de los Indicadores del Expediente Municipal." style="width: 100%;">
                 <hr>
                 <h3>¿Para qué sirve?</h3>
@@ -33,7 +33,7 @@
                     </li>
                 </ul>
                 <br>
-                <img src= "/views/resources/images/exp/presentacion2.jpg"
+                <img src= "/siscali/views/resources/images/exp/presentacion2.jpg"
                      alt="Presentación de los Indicadores del Expediente Municipal." style="width: 100%;">
                 <hr>
                 <h3>¿Por qué es importante el expediente municipal?</h3>
@@ -61,7 +61,7 @@
                     La Información de calidad es fundamental para la toma de decisiones y el ejercicio de la planificación.
                 </p>
                 <br>
-                <img src= "/views/resources/images/exp/presentacion3.jpg"
+                <img src= "/siscali/views/resources/images/exp/presentacion3.jpg"
                      alt="Presentación de los Indicadores del Expediente Municipal." style="width: 100%;">
                 <hr>
                 <h3>¿Cómo se construye el expediente municipal?</h3>
@@ -150,7 +150,3 @@
     </div>
 </div>
 
-<script>
-    $("#consultaIndicadores").addClass("active");
-    $("#consultaEXP").addClass("active");
-</script>

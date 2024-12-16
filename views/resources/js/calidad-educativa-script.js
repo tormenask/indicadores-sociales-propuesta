@@ -33,7 +33,7 @@ var tooltip = d3.select("div#mapa")
         .attr("class", "tooltip hidden");
 //need this for correct panning
 var g = svg.append("g");
-d3.json("/sis/views/resources/geojson/comunas.geojson", function (json) {
+d3.json("/siscali/views/resources/geojson/comunas.geojson", function (json) {
     g.append("g")
             .attr("class", "boundary")
             .selectAll("boundary")

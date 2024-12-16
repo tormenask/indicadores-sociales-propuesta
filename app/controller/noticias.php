@@ -156,14 +156,14 @@ class NoticiasController {
             for ($j = 0; $j < $longitud1; $j++) {
                 $filename = $nombreImagen[$j];
                 $nombreNoticias = (($longitud1-1) === $j)? $nombreNoticias . $nombreImagen[$j] : $nombreNoticias . $nombreImagen[$j].";";                
-                $add = $_SERVER['DOCUMENT_ROOT'] . "/app/view/resources/noticias/$idNoticia/$filename";
+                $add = $_SERVER['DOCUMENT_ROOT'] . "/siscali/app/view/resources/noticias/$idNoticia/$filename";
                 if (move_uploaded_file($imagen['tmp_name'][$j], $add)) {
                     $imagenMovida = True;
                 } else {
                     $imagenMovida = False;
                 }
             }
-            $path = "/app/view/resources/noticias/$idNoticia";
+            $path = "/siscali/app/view/resources/noticias/$idNoticia";
             if ($imagenMovida == True) {
                 $idNoticia = NULL;
                 $resp = $noticias->crearNoticia($idNoticia, $tituloNoticia, $anhoNoticia, $fechaNoticia, $textoNoticia, $path,$nombreNoticias);
@@ -172,7 +172,7 @@ class NoticiasController {
                 return "Error al crear";
             }
         } else {
-            $path = "/app/view/resources/noticias/$idNoticia";
+            $path = "/siscali/app/view/resources/noticias/$idNoticia";
             $idNoticia = NULL;
             $resp = $noticias->crearNoticia($idNoticia, $tituloNoticia, $anhoNoticia, $fechaNoticia, $textoNoticia, $path, NULL);
         }
@@ -207,14 +207,14 @@ class NoticiasController {
             for ($j = 0; $j < $longitud1; $j++) {
                 $filename = $nombreImagen[$j];
                 $nombreNoticias = (($longitud1-1) === $j)? $nombreNoticias . $nombreImagen[$j] : $nombreNoticias . $nombreImagen[$j].";";                
-                $add = $_SERVER['DOCUMENT_ROOT'] . "/app/view/resources/noticias/$idNoticia/$filename";
+                $add = $_SERVER['DOCUMENT_ROOT'] . "/siscali/app/view/resources/noticias/$idNoticia/$filename";
                 if (move_uploaded_file($imagen['tmp_name'][$j], $add)) {
                     $imagenMovida = True;
                 } else {
                     $imagenMovida = False;
                 }
             }
-            $path = "/app/view/resources/noticias/$idNoticia";
+            $path = "/siscali/app/view/resources/noticias/$idNoticia";
             if ($imagenMovida == True) {
                 $resp = $noticias->editarNoticia($idNoticia, $tituloNoticia, $anhoNoticia, $fechaNoticia, $textoNoticia, $path,$nombreNoticias);
             } else {
@@ -222,7 +222,7 @@ class NoticiasController {
                 return "Error al editar";
             }
         } else {
-            $path = "/app/view/resources/noticias/$idNoticia";
+            $path = "/siscali/app/view/resources/noticias/$idNoticia";
             $nombreNoticias = $noticias->consultarNoticias($idNoticia);
             $resp = $noticias->editarNoticia($idNoticia, $tituloNoticia, $anhoNoticia, $fechaNoticia, $textoNoticia, $path, $nombreNoticias['imagenesNoticia']);
         }

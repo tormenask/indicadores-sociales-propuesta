@@ -71,7 +71,7 @@
     });
     function consultarZonasGeograficas(tipoZonaGeografica) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/exp/consultas.php";
+        var url = "views/modules/consulta-indicadores/exp/consultas.php";
         data.append("idIndicador2", idIndicador);
         data.append("geografia2", tipoZonaGeografica);
         $.ajax({
@@ -120,7 +120,7 @@
 
     function consultarDesagregacionesTematicas(tipoZonaGeografica, zonaGeografica) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/exp/consultas.php";
+        var url = "views/modules/consulta-indicadores/exp/consultas.php";
         data.append("idIndicador3", idIndicador);
         data.append("geografia3", tipoZonaGeografica);
         data.append("zona3", zonaGeografica);
@@ -179,7 +179,7 @@
     function consultarFechas(idIndicador, tipoZonaGeografica, zonaGeografica, desagregacionesTematicas) {
         if (desagregacionesTematicas.length >= 1) {
             var data = new FormData();
-            var url = "/views/modules/consulta-indicadores/exp/consultas.php";
+            var url = "views/modules/consulta-indicadores/exp/consultas.php";
             data.append("idIndicador4", idIndicador);
             data.append("geografia4", tipoZonaGeografica);
             data.append("zona4", zonaGeografica);

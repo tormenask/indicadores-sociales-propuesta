@@ -1,6 +1,6 @@
 queue()
-        .defer(d3.json, "/views/modules/consulta-indicadores/opc/data.php")
-        .defer(d3.json, "/views/modules/consulta-indicadores/opc/static/geojson/barrios.json")
+        .defer(d3.json, "views/modules/consulta-indicadores/opc/data.php")
+        .defer(d3.json, "views/modules/consulta-indicadores/opc/static/geojson/barrios.json")
         .await(makeGraphs);
 
 function makeGraphs(error, records, states) {

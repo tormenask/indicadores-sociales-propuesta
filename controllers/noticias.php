@@ -24,7 +24,7 @@ class NoticiaController {
                 $titulo_noticia = $item['tituloNoticia'];
                 natsort($img_arr);
                 $location = $img_arr[0];
-                $path = $ruta . '/' . $location;
+                $path = '/siscali/'.$ruta . '/' . $location;
 
                 if ($i == 0) {
                     echo '<div class="item active">';
@@ -114,11 +114,11 @@ class NoticiaController {
                     $path = $ruta . '/' . $location;
                     if ($j == 1) {
                         echo '  <div class="item active">
-                                    <img src="' . $path . ' "alt=" Imagen ' . $i . 'de la noticia' . $item['tituloNoticia'] . '"/>
+                                    <img src="/siscali' . $path . ' "alt=" Imagen ' . $i . 'de la noticia' . $item['tituloNoticia'] . '"/>
                                 </div>';
                     } else {
                         echo '  <div class="item">
-                                    <img src="' . $path . ' "alt=" Imagen ' . $i . 'de la noticia' . $item['tituloNoticia'] . '"/>
+                                    <img src="/siscali' . $path . ' "alt=" Imagen ' . $i . 'de la noticia' . $item['tituloNoticia'] . '"/>
                                 </div>';
                     }
                     $j++;

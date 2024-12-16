@@ -104,7 +104,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivo"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresSis" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresSis" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -169,7 +169,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarFicha"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingFichaSis" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingFichaSis" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -237,7 +237,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoExp"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresExp" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresExp" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -301,7 +301,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarFichaExp"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingFichaExp" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingFichaExp" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -368,7 +368,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoIGC"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loading" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loading" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -419,7 +419,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarFichaIGC"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loading" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loading" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -512,7 +512,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoOpc"
                                                    style="margin:0;" class="btn btn-primary" />                                                   
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresOpc" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresOpc" style="display: none;" />
                                         </div>
                                     </div>
                                   </form>
@@ -622,7 +622,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoPiia"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresPiia" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresPiia" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -686,7 +686,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarFichaPiia"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingFichaPiia" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingFichaPiia" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -753,7 +753,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoOdraf"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresOdraf" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresOdraf" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -817,7 +817,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarFichaOdraf"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingFichaOdraf" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingFichaOdraf" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -885,7 +885,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCuatrenioODS"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingCuatrenioODS" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingCuatrenioODS" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -942,7 +942,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitSeguimientoODS"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingSeguimientoODS" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingSeguimientoODS" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -998,7 +998,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitFichaODS"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingFichaODS" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingFichaODS" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>
@@ -1061,7 +1061,7 @@ if (!$crear && !$modificar && !$eliminar) {
                                             <input type="button" name="btn" value="Cargar archivo" 
                                                    id="submitCargarArchivoDadii"
                                                    style="margin:0;" class="btn btn-primary" />
-                                            <img src="views/resources/images/loading.gif" id="loadingIndicadoresDadii" style="display: none;" />
+                                            <img src="/siscali/views/resources/images/loading.gif" id="loadingIndicadoresDadii" style="display: none;" />
                                         </div>
                                     </div>
                                 </form>

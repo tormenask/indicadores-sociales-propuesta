@@ -790,7 +790,7 @@
             <div class="item active">
                 <div class="container" style="width: 100%; margin: 0px; padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-sm-12 img-slider" style="background: url(/views/resources/images/slider/slider1.jpg) no-repeat left center; background-size: cover;" >
+                        <div class="col-sm-12 img-slider" style="background: url(/siscali/views/resources/images/slider/slider1.jpg) no-repeat left center; background-size: cover;" >
                             <div class="row sliderH" >
                                 <div class="col-xs-12 col-sm-2 indicator1 slider_none" style="height: 100%; border-left: #fff 4px solid; border-bottom: #fff 4px solid; border-right: #fff 4px solid; ">
                                     <a style="color: #fff;" href="#">

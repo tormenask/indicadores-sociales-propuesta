@@ -89,7 +89,7 @@
     <div class="row" style="margin-top: 40px;margin-bottom: 15px;margin-left:-5%;"><ul class="nospace group">
             <div class="col-xs-12 col-sm-4">
                 <li class="one_third">
-                    <article><a href="consulta-indicadores/dimensiones-sis" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/dimensiones_sis.png" 
+                    <article><a href="consulta-indicadores/dimensiones-sis" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/dimensiones_sis.png" 
                             alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo Social</h6></a>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-xs-12 col-sm-4">
                 <li class="four_quarter">
-                    <article><a href="consulta-indicadores/ods" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/ODS-circulo.png" 
+                    <article><a href="consulta-indicadores/ods" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/ODS-circulo.png" 
                             alt="Imagen de presentación de los Indicadores de los Objetivos de Desarrollo Sostenible, para Santiago de Cali"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 2.0rem;">Objetivos de Desarrollo Sostenible, para Santiago de Cali</h6></a>
@@ -109,7 +109,7 @@
             </div>            
             <div class="col-xs-12 col-sm-4">
                 <li class="three_quarter">
-                    <article><a href="consulta-indicadores/igc" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/indicadores_globales_ciudad.png" 
+                    <article><a href="consulta-indicadores/igc" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/indicadores_globales_ciudad.png" 
                             alt="Imagen de presentación de los Indicadores Globales de Ciudad"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores Globales de Ciudad</h6></a>
@@ -126,7 +126,7 @@
             </div>
             <div class="col-xs-12 col-sm-4">
                 <li class="two_third">
-                    <article><a href="consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/indicadores_comunas.png" 
+                    <article><a href="consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/indicadores_comunas.png" 
                             alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social, por comunas"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo Social, por comunas</h6></a>
@@ -136,7 +136,7 @@
             </div>
             <!-- <div class="col-xs-12 col-sm-4">
                 <li class="five_third">
-                    <article><a href="consulta-indicadores/piia" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/indicadores_piia.png" 
+                    <article><a href="consulta-indicadores/piia" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/indicadores_piia.png" 
                             alt="Imagen de presentación de los Indicadores de la Política de Primera Infancia, Infancia y Adolescencia"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 1.8rem;">Indicadores de la Política de Primera Infancia, Infancia y Adolescencia</h6></a>
@@ -146,7 +146,7 @@
             </div> -->
             <div class="col-xs-12 col-sm-4">
                 <li class="six_third">
-                    <article><a href="consulta-indicadores/exp" style="text-decoration-color: #FFFFFF;"><img src="views/resources/images/home/indicadores_expediente_municipal.png" 
+                    <article><a href="consulta-indicadores/exp" style="text-decoration-color: #FFFFFF;"><img src="/siscali/views/resources/images/home/indicadores_expediente_municipal.png" 
                             alt="Imagen de presentación de los Indicadores Globales de Ciudad"
                             style=" border-radius: 150px; width: 100%; margin-top: -65px;"/>
                     <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores del expediente municipal</h6></a>
@@ -165,7 +165,7 @@
 
     <!-- <div class="col-xs-12 col-sm-4 margin-sets">
         <a href="consulta-indicadores/dadii">
-            <img src="views/resources/images/home/logoDadii.png" 
+            <img src="/siscali/views/resources/images/home/logoDadii.png" 
                  alt="Indicadores de desempeño Institucional"
                  style="width: 100%;"/>
         </a>
@@ -174,14 +174,14 @@
 <div class="row" style="margin-bottom: 15px;">    -->
     <!-- <div class="col-xs-12 col-sm-4 margin-sets">
         <a href="consulta-indicadores/odraf">
-            <img src="views/resources/images/home/indicadores_odraf.png" 
+            <img src="/siscali/views/resources/images/home/indicadores_odraf.png" 
                  alt="Imagen de presentación de los Indicadores del Observatorio del Deporte, la Recreación y la Actividad Física"
                  style="width: 100%;"/>
         </a>
     </div> -->
     <!-- <div class="col-xs-12 col-sm-4 margin-sets">
         <a href="consulta-indicadores/opc">
-            <img src="views/resources/images/home/indicadores_opc.png"
+            <img src="/siscali/views/resources/images/home/indicadores_opc.png"
                  alt="Imagen de presentación del Visualizador de Datos del Observatorio de Paz y Cultura Ciudadana"
                  style="width: 100%;"/>
         </a>

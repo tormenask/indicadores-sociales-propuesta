@@ -1,7 +1,7 @@
 <?php include 'views/modules/header.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@0.2.2"></script>
-<script src="views/resources/js/ods-script.js"></script>
+<script src="/siscali/views/resources/js/ods-script.js"></script>
 <div class="row">
     <ul class="breadcrumb">
         <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
@@ -15,7 +15,7 @@
         style="display:flex; align-items:center; justify-content: center; margin-top:3rem;">
         <article style="display: flex; justify-content:center; align-items:center;">
             <a href="consulta-indicadores/dimensiones-sis-comunas" style="text-decoration-color: #FFFFFF; display: flex; justify-content:center; align-items:center; flex-direction:column">
-                <img src="views/resources/images/home/dimensiones_sis.png"
+                <img src="/siscali/views/resources/images/home/dimensiones_sis.png"
                     alt="Imagen de presentación de los Indicadores para la Medición del Desarrollo Social, por comunas"
                     style=" border-radius: 150px; width: 50%; margin-top: -65px;" />
                 <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores para la Medición del Desarrollo
@@ -73,7 +73,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 
         $.LoadingOverlaySetup({
             background: "rgba(255, 255, 255, 0.5)",
-            image: "/views/resources/images/cube_load.gif",
+            image: "/siscali/views/resources/images/cube_load.gif",
             imageAnimation: "3.5s fadein",
             imageColor: "#ffcc00"
         });
@@ -102,7 +102,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         data.append('desagregaciones', JSON.stringify(desagregaciones));
         data.append('fechas', JSON.stringify(fechas));
         data.append('zonas', JSON.stringify(zonas));
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         $.ajax({
             type: "POST",
             url: url,
@@ -136,7 +136,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 <script>
     function consultarFuentes(idIndicador) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicadorFte", idIndicador);
         $.ajax({
             type: "POST",
@@ -154,7 +154,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
     }
     function consultarDesagregacionesGeograficasFuente(idIndicador, fuenteDatos) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador4", idIndicador);
         data.append("fuente4", fuenteDatos);
         $.ajax({
@@ -174,7 +174,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
     }
     function consultarDesagregacionesGeograficas(idIndicador) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador1", idIndicador);
         $.ajax({
             type: "POST",
@@ -194,7 +194,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 
     function consultarDesagregacionesTematicasFuente(idIndicador, desagregacionesGeograficas, fuenteDatos) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador5", idIndicador);
         data.append("desagregacionesGeograficas5", desagregacionesGeograficas);
         data.append("fuente5", fuenteDatos);
@@ -214,7 +214,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
     }
     function consultarDesagregacionesTematicas(idIndicador, desagregacionesGeograficas) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador2", idIndicador);
         data.append("desagregacionesGeograficas2", desagregacionesGeograficas);
         $.ajax({
@@ -235,7 +235,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
 
     function consultarFechas(idIndicador, fuente, desagregacionesGeograficas, desagregacionesTematicas) {
         var data = new FormData();
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         data.append("idIndicador3", idIndicador);
         data.append("fuente3", fuente);
         data.append("desagregacionesGeograficas3", desagregacionesGeograficas);

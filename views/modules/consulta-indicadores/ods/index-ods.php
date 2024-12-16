@@ -1,5 +1,5 @@
 <?php include './views/modules/header.php'; ?>
-<script src="views/resources/js/ods-script.js"></script>
+<script src="/siscali/views/resources/js/ods-script.js"></script>
 <div class="row">
     <ul class="breadcrumb">
         <li> <a href="" style="color: #000;"><i class="glyphicon glyphicon-home"></i></a></li>
@@ -37,7 +37,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         //Para overlay
         $.LoadingOverlaySetup({
         background: "rgba(255, 255, 255, 0.5)",
-        image           : "/views/resources/images/cube_load.gif",
+        image           : "/siscali/views/resources/images/cube_load.gif",
         imageAnimation  : "3.5s fadein",
         imageColor      : "#ffcc00"
     });
@@ -79,7 +79,7 @@ if (!empty($idDimension) && !empty($idTematica) && !empty($idIndicador) && !empt
         data.append('desagregaciones', JSON.stringify(desagregaciones));
         data.append('fechas', JSON.stringify(fechas));
         data.append('zonas', JSON.stringify(zonas));
-        var url = "/views/modules/consulta-indicadores/consultas-indicador.php";
+        var url = "/siscali/views/modules/consulta-indicadores/consultas-indicador.php";
         $.ajax({
             type: "POST",
             url: url,

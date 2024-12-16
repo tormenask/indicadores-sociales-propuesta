@@ -43,7 +43,7 @@ class ConsultasController
         <div class='panel-heading' role='tab' id='heading{$idDimension}' style='border-radius: 8px 8px 0 0; background: {$color}; display: flex; align-items: center; border-color: white !important;'>
             <h4 class='panel-title' style='font-size: 2rem;'>
                 <a role='button' data-toggle='collapse' data-parent='#accordion-{$idDimension}' href='#collapse{$idDimension}' aria-expanded='true' aria-controls='collapse{$idDimension}' style='color: white; text-decoration: none;'>
-                    <img class='img-responsive' src='siscali/{$icono}' alt='asd' width='70px' style='margin-right: 20px;'>
+                    <img class='img-responsive' src='/siscali/{$icono}' alt='asd' width='70px' style='margin-right: 20px;'>
                     {$nombreDimension}
                 </a>
             </h4>
@@ -91,8 +91,6 @@ class ConsultasController
         </div>
     </div>
 </div>";
-
-
             }
 
         }
@@ -1059,7 +1057,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="views/resources/images/loading3.gif" id="loadingPng' . $numeroGrafico . '" style="display: none; margin-left: 10px;"/>
+                                <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng' . $numeroGrafico . '" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>';
@@ -1320,7 +1318,7 @@ class ConsultasController
                                             <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                             <b>PNG</b>
                                         </button>
-                                        <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                        <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                                     </div>
                                 </div>
                             </div>
@@ -1565,7 +1563,7 @@ class ConsultasController
                             <hr>
                             <h4 style="text-align:left">Descargar gráfico</h4>
                             <script>
-                                var url = "/views/resources/js/descargarGrafico.js";
+                                var url = "/siscali/views/resources/js/descargarGrafico.js";
                                 $.getScript(url);
                             </script>
                             <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -1573,7 +1571,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -2227,7 +2225,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -2622,7 +2620,7 @@ class ConsultasController
             <div class="row border-consulta" style="padding-bottom:0px !important;">
                 <div class = "col-xs-12 col-sm-3">
                     <img alt="' . $nombreDimension . '" style="width: 100%;margin: 15px 0px;"
-                    src="' . $dimension["icono"] . '">
+                    src="/siscali/' . $dimension["icono"] . '">
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <h4 style="font-weight:bold;">' . $nombreDimension . '</h4>
@@ -2690,7 +2688,7 @@ class ConsultasController
                                     <hr>
                                     <h4 style="text-align:left">Descargar gráfico</h4>
                                     <script>
-                                        var url = "/views/resources/js/descargarGrafico.js";
+                                        var url = "/siscali/views/resources/js/descargarGrafico.js";
                                         $.getScript(url);
                                     </script>
                                     <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -2698,7 +2696,7 @@ class ConsultasController
                                             <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                             <b>PNG</b>
                                         </button>
-                                        <img src="views/resources/images/loading.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                        <img src="/siscali/views/resources/images/loading.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                                     </div>
                                 </div>
                             </div>
@@ -3389,7 +3387,7 @@ class ConsultasController
                             <hr>
                             <h4 style="text-align:left">Descargar gráfico</h4>
                             <script>
-                                var url = "/views/resources/js/descargarGrafico.js";
+                                var url = "/siscali/views/resources/js/descargarGrafico.js";
                                 $.getScript(url);
                             </script>
                             <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -3397,7 +3395,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -3793,7 +3791,7 @@ class ConsultasController
                             <hr>
                             <h4 style="text-align:left">Descargar gráfico</h4>
                             <script>
-                                var url = "/views/resources/js/descargarGrafico.js";
+                                var url = "/siscali/views/resources/js/descargarGrafico.js";
                                 $.getScript(url);
                             </script>
                             <div class="btn-group" role="group" style="width:100%; margin-bottom: 15px;">
@@ -3801,7 +3799,7 @@ class ConsultasController
                                     <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                     <b>PNG</b>
                                 </button>
-                                <img src="views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
+                                <img src="/siscali/views/resources/images/loading3.gif" id="loadingPng" style="display: none; margin-left: 10px;"/>
                             </div>
                         </div>
                     </div>
@@ -5423,7 +5421,7 @@ $(document).ready(function() {
 
         $year = $years[0];
 
-        echo '<link href="views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">';
+        echo '<link href="/siscali/views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">';
         echo "
             <script>
                 var allData = " . json_encode($dataAll, JSON_FORCE_OBJECT) . ";
@@ -5469,7 +5467,7 @@ $(document).ready(function() {
                                 .append("div")
                                 .attr("class", "tooltip hidden");
                             var g = svg.append("g");
-                            d3.json("/views/resources/geojson/comunas.geojson", function (json) {
+                            d3.json("/siscali/views/resources/geojson/comunas.geojson", function (json) {
                                 g.append("g")
                                     .attr("class", "boundary")
                                     .selectAll("boundary")
@@ -5572,7 +5570,7 @@ $(document).ready(function() {
                         var svg = d3.select("div#mapa");
                         var g = svg.select("g");
                         console.log(g);
-                        d3.json("/views/resources/geojson/comunas.geojson", function (json) {
+                        d3.json("/siscali/views/resources/geojson/comunas.geojson", function (json) {
                                 g.select("g")
                                     .attr("class", "boundary")
                                     .selectAll("boundary")
@@ -7045,30 +7043,30 @@ $(document).ready(function() {
 
         switch ($tipoConsulta) {
             case 'Comunas':
-                $link = '/siscali/consulta-indicadores/dimensiones-sis-comunas/' . $idDimension . '/' . $idTematica . '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
+                $link = 'dimensiones-sis-comunas/' . $idDimension . '/' . $idTematica . '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'SIS':
-                $link = '/siscali/consulta-indicadores/dimensiones-sis/' . $idDimension . '/' . $idTematica .
+                $link = 'dimensiones-sis/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'IGC':
-                $link = '/siscali/consulta-indicadores/igc/' . $idDimension . '/' . $idTematica .
+                $link = 'igc/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'EXP':
-                $link = '/siscali/consulta-indicadores/exp/' . $idDimension . '/' . $idTematica .
+                $link = 'exp/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . $tipoZonaGeografica . '/' . urlencode(implode(",", $desagregacionesTematicas)) . '/' . implode(",", $fchs) . '/' . $zonaGeografica;
                 break;
             case 'PIIA':
-                $link = '/siscali/consulta-indicadores/piia/' . $idDimension . '/' . $idTematica .
+                $link = 'piia/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             case 'ODRAF':
-                $link = '/siscali/consulta-indicadores/odraf/' . $idDimension . '/' . $idTematica .
+                $link = 'odraf/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
             default:
-                $link = '/siscali/consulta-indicadores/' . strtolower($tipoConsulta) . '/' . $idDimension . '/' . $idTematica .
+                $link = '' . strtolower($tipoConsulta) . '/' . $idDimension . '/' . $idTematica .
                     '/' . $idIndicador . '/' . str_replace(' ', '_', $this->sanearCadena($fuente)) . '/' . implode(",", $desagregacionesTematicas) . '/' . implode(",", $fchs) . '/' . implode(",", $desagregacionesGeograficas);
                 break;
         }
@@ -7230,7 +7228,7 @@ $(document).ready(function() {
             if ($cont >= 4) {
                 echo '<div class="m-widget4__item diferent_visibility">
                         <div class="m-widget4__img m-widget4__img--pic">
-                            <img src="views/resources/images/home/logos/' . $icono . '.png" alt="">
+                            <img src="/siscali/views/resources/images/home/logos/' . $icono . '.png" alt="">
                         </div>
                         <div class="m-widget4__info">
                             <span class="m-widget4__title">
@@ -7250,7 +7248,7 @@ $(document).ready(function() {
             } else {
                 echo '<div class="m-widget4__item">
                         <div class="m-widget4__img m-widget4__img--pic">
-                            <img src="views/resources/images/home/logos/' . $icono . '.png" alt="">
+                            <img src="/siscali/views/resources/images/home/logos/' . $icono . '.png" alt="">
                         </div>
                         <div class="m-widget4__info">
                             <span class="m-widget4__title">

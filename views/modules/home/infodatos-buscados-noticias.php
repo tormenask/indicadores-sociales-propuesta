@@ -41,7 +41,7 @@ require_once 'controllers/seriesDatos.php';
     font-weight: 600
 }
 </style>
-<script src="views/resources/lib/jQCloud/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script src="/siscali/views/resources/lib/jQCloud/jqcloud/jqcloud-1.0.4.min.js"></script>
 
 <div class="row margin-infodatos">
 <div class="col-xs-12 col-sm-4">

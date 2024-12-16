@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper" style="margin:5rem;">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/indicadores_globales_ciudad.png"
+        <img src="/siscali/views/resources/images/home/indicadores_globales_ciudad.png"
             alt="Imagen de presentación de los Indicadores Globales de Ciudad" style="height: 90px;" />
         <h6 style="font-weight: 700;font-size: 2.0rem;">Indicadores Globales de Ciudad</h6>
     </div>

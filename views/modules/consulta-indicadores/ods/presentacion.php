@@ -21,7 +21,7 @@
                 desafíos ambientales del mundo en general.
             </p>
             <br>
-            <img src="views/resources/images/ods/presentacion-ods.png"
+            <img src="/siscali/views/resources/images/ods/presentacion-ods.png"
                 alt="Presentación de los Objetivos de Desarrollo Sostenible" style="width: 100%;">
         </div>
     </div>

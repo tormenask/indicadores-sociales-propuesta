@@ -22,7 +22,7 @@ $resp = new ConsultasController();
 ?>
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" style="background-color: #fff;text-align: center;">
-        <img src="views/resources/images/home/logoDadii.png" style="height: 90px;" alt="Imagen de presentación del Departamento Administrativo de Desarrollo e Innovación Institucional" style="height: 90px;"/>    
+        <img src="/siscali/views/resources/images/home/logoDadii.png" style="height: 90px;" alt="Imagen de presentación del Departamento Administrativo de Desarrollo e Innovación Institucional" style="height: 90px;"/>    
     </div>    
     <!--<div class="sidebar-nav">-->     
     <div class="panel-group" id="accordion">
@@ -109,7 +109,7 @@ $resp = new ConsultasController();
             if (param.length >= 3) {
                 var data = new FormData();
                 data.append("consultaProceso", param);
-                var url = "/views/modules/consulta-indicadores/dadii/consultas.php";
+                var url = "/siscali/views/modules/consulta-indicadores/dadii/consultas.php";
                 $.ajax({
                     type: "POST",
                     url: url,
@@ -151,7 +151,7 @@ $resp = new ConsultasController();
         });
         function consultaIndicadorDadii(indicadorSelect) {
             var data = new FormData();
-            var url = "/views/modules/consulta-indicadores/dadii/consultas.php";
+            var url = "/siscali/views/modules/consulta-indicadores/dadii/consultas.php";
             data.append("indicadorSelect", indicadorSelect);
             $.ajax({
                 type: "POST",

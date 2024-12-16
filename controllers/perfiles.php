@@ -69,7 +69,7 @@ class PerfilesController {
             </div>
             <div class="row">
                 <div class="col-sm-3">
-                    <img class="img-responsive" src="views/resources/images/perfiles/' . $nombreImagen . '-cali.png" 
+                    <img class="img-responsive" src="../views/resources/images/perfiles/' . $nombreImagen . '-cali.png" 
                         style="padding-left: 10px; float: right;" 
                         alt="Imagen para la sección ' . $nombreSeccion . '">
                 </div>
@@ -907,7 +907,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngHomicidios" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngHomicidios" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngHomicidios").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorHomicidios").text()).trim();
@@ -985,7 +985,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngHurtos" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngHurtos" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngHurtos").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorHurtos").text()).trim();
@@ -1068,7 +1068,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngMortalidad" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngMortalidad" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngMortalidad").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorMortalidad").text()).trim();
@@ -1149,7 +1149,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngFecundidad" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngFecundidad" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngFecundidad").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorFecundidad").text()).trim();
@@ -1232,7 +1232,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngViolenciaSexual" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngViolenciaSexual" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngViolenciaSexual").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorViolenciaSexual").text()).trim();
@@ -1313,7 +1313,7 @@ class PerfilesController {
                                         <i class="fa fa-file-image-o" aria-hidden="true" style="margin-right:10px;"></i>
                                         <b>Descargar gráfico</b>
                                     </button>
-                                    <img src="views/resources/images/loading3.gif" id="loadingPngViolenciaIntrafamiliar" style="margin-left: 10px; display:none;"/>
+                                    <img src="/siscali/views/resources/images/loading3.gif" id="loadingPngViolenciaIntrafamiliar" style="margin-left: 10px; display:none;"/>
                                     <script>
                                         $("#imagenPngViolenciaIntrafamiliar").click(function () {
                                             var nombreIndicador = ($("#nombreIndicadorViolenciaIntrafamiliar").text()).trim();

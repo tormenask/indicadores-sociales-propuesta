@@ -1,8 +1,8 @@
-<link href="views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">
+<link href="/siscali/views/resources/css/perfiles-comunas.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.css" />
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="views/resources/lib/jquery-number/jquery.number.min.js"></script>
+<script src="../views/resources/lib/jquery-number/jquery.number.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.pyramidGridRenderer.min.js"></script>
