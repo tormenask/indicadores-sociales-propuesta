@@ -23,7 +23,7 @@ include_once 'vars.php'
         <meta name="description" content="El Sistema de Indicadores Sociales de Santiago de Cali, almacena, procesa, difunde y analiza datos producidos por la Administración Municipal.">
         <meta name="author" content="Sistema de Indicadores Sociales">
         <meta name="keywords" content="">
-        <link rel="shortcut icon" type="image/png" href="../views/resources/images/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="/siscali/views/resources/images/favicon.png"/>
         <title></title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="/siscali/views/resources/css/custom.css" rel="stylesheet" type="text/css"/>

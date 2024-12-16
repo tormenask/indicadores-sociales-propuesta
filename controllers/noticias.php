@@ -50,7 +50,7 @@ class NoticiaController {
                     </div>
                 </div>';
             } else {
-                $ruta = "/app/view/resources/noticias/0";
+                $ruta = "/siscali/app/view/resources/noticias/0";
                 $img_arr = ["logo.png"];
                 $titulo_noticia = $item['tituloNoticia'];
                 natsort($img_arr);
@@ -64,7 +64,7 @@ class NoticiaController {
                     $i++;
                     echo '
                     <div class="container-news" style="height: 100%;">
-                        <img class="ajustar-margen" src="' . $path . '" style=" width: 100%;" alt="' . $titulo_noticia . '">
+                        <img class="ajustar-margen" src="/siscali/' . $path . '" style=" width: 100%;" alt="' . $titulo_noticia . '">
                         <div class="overlay-news">
                             <div class="text-news">
                                 <a href="noticias#' . $item['anhoNoticia'] . '-' . $item['idNoticia'] . '" style="color: #fff; text-decoration: none;">

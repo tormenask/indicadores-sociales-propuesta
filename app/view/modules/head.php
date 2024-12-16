@@ -4,7 +4,7 @@
     <meta name="description" content="">
     <meta name="keywords"
         content="sistema de indicadores, sistema de indicadores de cali, sistema de indicadores de santiago de cali, sis, indicadores sociales, sis cali">
-    <link rel="shortcut icon" type="image/png" href="app/view/resources/images/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/siscali/app/view/resources/images/favicon.png" />
     <title>Administración | Sistema de Indicadores Sociales</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="app/view/resources/css/AdminLTE.css" rel="stylesheet" type="text/css" />
