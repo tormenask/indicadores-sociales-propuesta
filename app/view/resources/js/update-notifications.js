@@ -5,7 +5,7 @@ $(document).ready(function () {
         data.append('view', view);
         $.ajax({
             type: "POST",
-            url: "/app/view/modules/fetch.php",
+            url: "/siscali/app/view/modules/fetch.php",
             data: data,
             dataType: "json",
             cache: false,

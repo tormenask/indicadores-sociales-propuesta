@@ -79,21 +79,21 @@ class LinkModelBack {
                 || $link == "admin/logs/gestionLogs"
                 || $link == "admin/notificaciones/gestionNotificaciones"
                 ) {
-            $module = "siscali/view/modules/" . $link . ".php";
+            $module = "view/modules/" . $link . ".php";
         } elseif ($link == "siscali/index") {
-            $module = "siscali/view/modules/login.php";
+            $module = "view/modules/login.php";
         } elseif ($link == "siscali/recuperar-contrasena") {
-            $module = "siscali/view/modules/recuperar.php";
+            $module = "view/modules/recuperar.php";
         } elseif ($link == "siscali/app") {
-            $module = "siscali/view/modules/login.php";
+            $module = "view/modules/login.php";
         } elseif ($link == "siscali/admin/salir") {
-            $module = "siscali/view/modules/salir.php";
+            $module = "view/modules/salir.php";
         } elseif ($link == "siscali/admin/gestionIndicadores") {
-            $module = "siscali/view/modules/administracion/indicadores/gestionIndicadores.php";
+            $module = "view/modules/administracion/indicadores/gestionIndicadores.php";
         } elseif ($link == "siscali/login/error") {
-            $module = "siscali/view/modules/error.php";
+            $module = "view/modules/error.php";
         } else {
-            $module = "siscali/view/modules/login.php";
+            $module = "view/modules/login.php";
         }
         return $module;
     }

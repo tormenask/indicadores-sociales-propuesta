@@ -21,7 +21,7 @@ if (isset($_SESSION['userData'])) {
             <b>SIS</b>
         </span>
         <span class="logo-lg">
-            <img src="app/view/resources/images/logo.png" alt="Logo del Sistema de Indicadores Sociales" style="height: 60px;">
+            <img src="/siscali/app/view/resources/images/logo.png" alt="Logo del Sistema de Indicadores Sociales" style="height: 60px;">
         </span>
     </a>
     <nav class="navbar navbar-static-top">
@@ -41,7 +41,7 @@ if (isset($_SESSION['userData'])) {
                             <ul class="dropdown-menu" id="notif-menu"></ul>
                         </li>
                         <script>
-                            var url = "app/view/resources/js/update-notifications.js";
+                            var url = "/siscali/app/view/resources/js/update-notifications.js";
                             $.getScript(url);
                         </script>
                         ';
@@ -52,9 +52,9 @@ if (isset($_SESSION['userData'])) {
                     <button class="btn btn-default dropdown-toggle" type="button" id="profile" data-toggle="dropdown">
                         <?php
                         if ($genero == "Femenino") {
-                            echo ' <img src="app/view/resources/images/login-female.png" style="height: 35px;">';
+                            echo ' <img src="/siscali/app/view/resources/images/login-female.png" style="height: 35px;">';
                         } elseif ($genero == "Masculino"){
-                            echo ' <img src="app/view/resources/images/login-male.png" style="height: 35px;">';
+                            echo ' <img src="/siscali/app/view/resources/images/login-male.png" style="height: 35px;">';
                         }
                         ?>
 
