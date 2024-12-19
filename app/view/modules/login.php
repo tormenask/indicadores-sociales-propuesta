@@ -10,7 +10,7 @@
                                 <img src="view/resources/images/logo2.png" alt="Logo del Sistema de Indicadores Sociales" height="100px">
                             </a>
                             <h1>Inicio de sesión</h1>
-                            <form role="form" action="./controller/controller_login.php" method="post" id="login-form" autocomplete="on">
+                            <form role="form" action="/siscali/app/controller/controller_login.php" method="post" id="login-form" autocomplete="on">
                                 <div class="form-group">
                                     <label for="Usuario" class="sr-only">Usuario</label>
                                     <input id="user" type="text" name="user" class="form-control" placeholder="Ingrese su correo electrónico">

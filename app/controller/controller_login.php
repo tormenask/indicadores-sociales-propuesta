@@ -15,7 +15,8 @@ $log = new LogController();
 if (isset($_POST['ingresar'])) {
     $user = $_POST['user'];
     $password = $_POST['password'];
-    if ($user !== "" && $password !== "") {
+    echo $password;
+    /* if ($user !== "" && $password !== "") {
         $usuario = $crud->obtenerUsuario($_POST['user'], $_POST['password']);
         $nombreEstado = $estado->consultarNombreEstado($usuario->getEstado());
         if ($usuario->getCorreoElectronico() != NULL) {
@@ -55,7 +56,7 @@ if (isset($_POST['ingresar'])) {
         }
     } else {
         header('Location: ../index.php?error=0');
-    }
+    } */
 } elseif (isset($_POST['salir'])) {
     unset($_SESSION);
     header('Location: ../index.php');

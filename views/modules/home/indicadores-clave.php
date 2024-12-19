@@ -859,7 +859,7 @@
             <div class="item">
                 <div class="container" style="width: 100%; margin: 0px; padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-sm-12 img-slider" style="background: url(/views/resources/images/slider/slider2.jpg) no-repeat left center; background-size: cover;" >
+                        <div class="col-sm-12 img-slider" style="background: url(/siscali/views/resources/images/slider/slider2.jpg) no-repeat left center; background-size: cover;" >
 
                             <div class="row sliderH" >
                                 <div class="col-xs-0 col-sm-2 slider_none" style="height: 100%; border-bottom: #fff 4px solid;"></div>
@@ -910,7 +910,7 @@
             <div class="item">
                 <div class="container" style="width: 100%; margin: 0px; padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-sm-12 img-slider" style="background: url(/views/resources/images/slider/slider3.jpg) no-repeat left center; background-size: cover;" >
+                        <div class="col-sm-12 img-slider" style="background: url(/siscali/views/resources/images/slider/slider3.jpg) no-repeat left center; background-size: cover;" >
                             <div class="row sliderH">
                                 <div class="col-xs-0 col-sm-5 indicator5 slider_none" style="height:100%; border-left: #fff 4px solid; border-bottom: #fff 4px solid; border-right: #fff 4px solid;">
                                     <a style="color: #fff;" href="#">
@@ -968,7 +968,7 @@
             <div class="item">
                 <div class="container" style="width: 100%; margin: 0px; padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-sm-12 img-slider" style="background: url(/views/resources/images/slider/slider4.jpg) no-repeat left center; background-size: cover;" >
+                        <div class="col-sm-12 img-slider" style="background: url(/siscali/views/resources/images/slider/slider4.jpg) no-repeat left center; background-size: cover;" >
                             <div class="row sliderH" >
                                 <div class="col-xs-0 col-sm-2 slider_none" style="height: 100%; border-bottom: #fff 4px solid;"></div>
                                 <div class="indicator3 col-xs-12 col-sm-2 slider_none" style="height: 100%; border-right: #fff 4px solid; border-left: #fff 4px solid; border-bottom: #fff 4px solid;">
@@ -1037,7 +1037,7 @@
             <div class="item">
                 <div class="container" style="width: 100%; margin: 0px; padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-sm-12 img-slider" style="background: url(/views/resources/images/slider/slider5.jpg) no-repeat left center; background-size: cover;" >
+                        <div class="col-sm-12 img-slider" style="background: url(/siscali/views/resources/images/slider/slider5.jpg) no-repeat left center; background-size: cover;" >
                             <div class="row sliderH">
                                 <div class="col-xs-0 col-sm-5 indicator4 slider_none" style="height:100%; border-left: #fff 4px solid; border-bottom: #fff 4px solid; border-right: #fff 4px solid;">
                                     <a style="color: #fff;" href="#">
